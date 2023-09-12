@@ -3,7 +3,7 @@
 ## 2023-09-12
 
 
-<div hidden>
+<details><summary>PUML first meeting</summary>
 
 ```
 @startuml firstMeeting
@@ -138,7 +138,8 @@ travel_updates   ...>   booking_logger
 @enduml
 ```
 
-</div>
+</details>
+
 
 
 ![](firstMeeting.svg)
