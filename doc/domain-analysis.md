@@ -153,5 +153,15 @@ travel_updates   ...>   booking_logger
 - [ ] the trip can be organized (created) by the user selcting multiple items? or should also be automatically added by mail informations?
     - example based on time of the trip and locations?
 
+<details><summary>Reviewed</summary>
 
 ![](domain-analysis-mp.svg)
+
+</details>
+
+
+<details><summary>with answer</summary>
+
+![](domain-analysis-mp.2.svg)
+
+</details>

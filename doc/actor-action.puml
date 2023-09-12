@@ -21,6 +21,10 @@ skinparam rectangle{
 '    RoundCorner<<action>> 30
     BackgroundColor<<sticky>> #F3D22B
     borderColor<<sticky>> black
+
+    borderColor<<answer>> #lightgray
+    FontColor<<answer>> #3F75BB
+    '
  }
 
 
@@ -112,11 +116,46 @@ to book a ticket
 via the app**??**
 ]
 
+rectangle booking_answer <<answer>> [
+
+**Answer 16**
+
+---
+
+This only applies to Road Warrior;
+the user will have to manually
+interact with the individual
+service to make changes or cancelations.
+
+]
+
 rectangle sharer  [
 Sharer
 ]
 
-rectangle help 
+rectangle help  [
+
+**Help**
+
+---
+
+
+]
+
+rectangle help_answer <<answer>>[
+**Answer 17**
+
+---
+
+We allow the user to specify a preferred travel agent,
+and that's where we redirect them. 
+If the user hasn't specified a travel agent,
+then this facility isn't available 
+(we aren't in the business of brokering for travel agents.
+
+]
+
+help =[#green] help_answer
 
 rectangle booking_viewer  [
 Booking Viewer
@@ -156,17 +195,7 @@ trips
 
 ]
 
-rectangle q1 <<action>>#line.dotted[
-should the
-manual booking
-interact directly
-with the agency?
 
---- 
-
-or use the GDS
-Sabre/Apollo
-]
 
 rectangle q2 <<action>>#line.dotted[
 trip completed??
@@ -185,8 +214,6 @@ bi -[#black]-- booking_keeping
 
 data_reporter -[#black]-- booking_keeping
 
-booking_manual             ..               q1
-q1 .. travel_updates
 booking_viewer            .[hidden]               sharer
 sharer                    .[hidden]               booking_manual
 booking_manual            .[hidden].               help
@@ -219,10 +246,13 @@ system -[#black]-- data_reporter
 ' connectivty intermediate
 booking_viewer   <-[#black]-    data_reporter
 '
-help             .      travel_updates
+help             ..      travel_updates
 booking_viewer   -[#black]--    booking_keeping
-booking_manual   -[#black]-->   booking_keeping
-sharer           -[#black]--    booking_keeping
+'booking_manual   -[#black]-->   booking_keeping
+booking_manual   -[#black]-->   booking_logger
+
+group_trip           -[#black]    sharer
+'sharer           -[#black]--    booking_keeping
 '
 mail_poller      <-[#black]-    mail_filter
 
@@ -232,6 +262,10 @@ booking_logger   -[#black]->    booking_keeping
 mail_filter      -[#black]-    booking_logger
 travel_updates   -[#black]->   booking_logger
 '
+'
+'
+'
+booking_manual =[#green] booking_answer
 @enduml
 
 
