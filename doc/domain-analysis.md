@@ -2,7 +2,7 @@
 
 ## 2023-09-12
 
-```platuml
+```
 @startuml
 skinparam handwritten true
 hide stereotype
