@@ -3,8 +3,7 @@
 ## 2023-09-12
 
 
-![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/relic-da/ArchEnemies/dev/doc/actor-action.puml?token=GHSAT0AAAAAACHBAMQULPSFQSQRBIOCEBTKZIAZZSA)
-
+<div hidden>
 ```
 @startuml firstMeeting
 skinparam handwritten true
@@ -137,8 +136,7 @@ travel_updates   ...>   booking_logger
 '
 @enduml
 ```
+</div>
 
 
- 
-
- ![](firstMeeting.svg)
+![](firstMeeting.svg)
