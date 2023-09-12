@@ -3,7 +3,7 @@
 ## 2023-09-12
 
 
-![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/relic-da/ArchEnemies/dev/doc/actor-action.puml?token=GHSAT0AAAAAACHBAMQULPSFQSQRBIOCEBTKZIAZZSA)
+![alternative text](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/relic-da/ArchEnemies/dev/doc/actor-action.puml)
 
 ```
 @startuml firstMeeting
