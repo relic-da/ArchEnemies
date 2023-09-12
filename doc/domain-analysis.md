@@ -3,7 +3,7 @@
 ## 2023-09-12
 
 ```
-@startuml
+@startuml firstMeeting
 skinparam handwritten true
 hide stereotype
 
@@ -137,3 +137,5 @@ travel_updates   ...>   booking_logger
 
 
  
+
+ ![](firstMeeting.svg)
