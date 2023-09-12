@@ -142,3 +142,16 @@ travel_updates   ...>   booking_logger
 
 
 ![](firstMeeting.svg)
+
+
+## Questions
+
+> Items in the dashboard should be able to be grouped by trip, and once the trip is complete, the items should automatically be removed from the dashboard
+
+- [ ] what we see as items? single booking?
+    - we can have multibooking trip
+- [ ] the trip can be organized (created) by the user selcting multiple items? or should also be automatically added by mail informations?
+    - example based on time of the trip and locations?
+
+
+![](domain-analysis-mp.svg)
