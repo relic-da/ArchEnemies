@@ -4,6 +4,7 @@
 
 
 <div hidden>
+
 ```
 @startuml firstMeeting
 skinparam handwritten true
@@ -136,6 +137,7 @@ travel_updates   ...>   booking_logger
 '
 @enduml
 ```
+
 </div>
 
 
