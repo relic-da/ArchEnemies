@@ -1,6 +1,7 @@
 # O'Reilly Architecture Katas 2023 - ArchEnemies
 
 ## Members
+
 - Alvaro Salvador [[LinkedIn](https://www.linkedin.com/in/alvarorafael/)]
 - Anand Bajpai [[LinkedIn](https://www.linkedin.com/in/bajpai-anand)]
 - Constantine Korobov [[LinkedIn](https://www.linkedin.com/in/ckorobov/)]
@@ -8,7 +9,8 @@
 - Sergiy Shelekh [[LinkedIn](https://www.linkedin.com/in/proxitrone/)]
 
 ## Problem/Mission
-- Problem Statement
+
+- [Problem statement](/problem.md)
 - Additional Clarifications
 - Requirements
   - Business
@@ -16,9 +18,11 @@
 - Assumptions and Constraints
 
 ## Solution
+
 - Actors and Actions
 - Event Storming [[about](https://www.eventstorming.com/)]
 - [[Q: Where do we priortize actions?]]
+- [ADR](/doc/adr)
 - Architecture Analysis
   - Architecture Characteristics
     - Identify *driving* architecture Characteristic using [Architecture Characteristics Worksheet](https://www.developertoarchitect.com/downloads/architecture-characteristics-worksheet.pdf) and small description why they are relevent
