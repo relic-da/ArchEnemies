@@ -2,19 +2,19 @@
 
 ## Members
 
-- Alvaro Salvador [[LinkedIn](https://www.linkedin.com/in/alvarorafael/)]
-- Anand Bajpai [[LinkedIn](https://www.linkedin.com/in/bajpai-anand)]
-- Constantine Korobov [[LinkedIn](https://www.linkedin.com/in/ckorobov/)]
-- Mirco Paccusse [[LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)]
-- Sergiy Shelekh [[LinkedIn](https://www.linkedin.com/in/proxitrone/)]
+- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/]
+- Anand Bajpai [LinkedIn](https://www.linkedin.com/in/bajpai-anand)
+- Constantine Korobov [LinkedIn](https://www.linkedin.com/in/ckorobov/)
+- Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
+- Sergiy Shelekh [LinkedIn](https://www.linkedin.com/in/proxitrone/)
 
 ## Problem/Mission
 
 - [Problem statement](/problem.md)
-- Additional Clarifications
-- Requirements
-  - Business
-  - Technical/Architecture
+- [Additional Clarifications](/doc/glosary.md)
+- [Requirements](/doc/requirenments.md)
+  - [Business / Functional](/doc/requirenments.md#functional)
+  - [Technical/Architecture](/doc/requirenments.md#architecture-characteristics)
 - Assumptions and Constraints
 
 ## Solution
