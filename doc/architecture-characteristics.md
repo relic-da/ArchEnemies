@@ -8,4 +8,3 @@
 | 2 milions active user is requirement for DB/workers                                 | Elasticity     ||
 | 15 milions users size of DB.                                                        | Scalability    ||
 
-

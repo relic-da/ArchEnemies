@@ -109,9 +109,14 @@ rectangle 2 #line.dotted [
    query agency
 
 ]
-
 rectangle 3 #line.dotted [
-   **3**
+      **3**
+
+   Get updates
+]
+
+rectangle 4 #line.dotted [
+   **4**
 
    Validation
 
@@ -125,15 +130,19 @@ rectangle 3 #line.dotted [
 booking_crud - 2
 collector_agency --2
 
+Agencies -- 3
+GDS --3
 
-3 <- booking_crud
+3 -- collector_agency
 
-3 -> booking_crud
+4 <- booking_crud
+
+4 -> booking_crud
 
 
 '
-rectangle 4 #line.dotted [
-   **4**
+rectangle 5 #line.dotted [
+   **5**
 
    Storage
 
@@ -141,6 +150,6 @@ rectangle 4 #line.dotted [
 ]
  
 
-booking_crud -- 4
-4 -> booking_db
+booking_crud -- 5
+5 -> booking_db
 @enduml
