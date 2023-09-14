@@ -1,5 +1,7 @@
 # Requirenments
 
+## Functional
+
 ## Architecture Characteristics
 
 ### Performance

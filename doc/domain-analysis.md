@@ -168,3 +168,20 @@ travel_updates   ...>   booking_logger
 ![](domain-analysis-mp.2.svg)
 
 </details>
+
+
+## Domain brainstom
+
+![](problem-domain-brainstorm.svg)
+
+
+
+
+### feedback
+
+
+- workflow
+
+### flow
+
+source of datas
