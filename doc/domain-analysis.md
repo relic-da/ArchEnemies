@@ -170,6 +170,22 @@ travel_updates   ...>   booking_logger
 </details>
 
 
+## 2023-09-13
+
+We enhanced the design on our own and regrouped to compare. We identified following flows
+
+1. User enters a booking into system manually
+2. A booking is entered into system via email parsing
+3. User shares booking via social media or with individual(s)
+4. Agency changes (update schedule, cancel flight etc) booking
+5. User's yearly report
+6. Trip has ended
+7. Third party analytics
+
+After few hours of brainstroming we got a more precise picture
+
+![](meeting2/domain-analysis-meeting2.svg)
+
 ## Domain brainstom
 
 ![](problem-domain-brainstorm.svg)

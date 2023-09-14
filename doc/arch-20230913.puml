@@ -86,8 +86,11 @@ together {
 '    GDS <=[#black] Agencies
 }
 
-rectangle "Third parties" as third_parties <<actor>>
+rectangle third_parties <<actor>>[
 
+    Third parties  
+
+]
 
 
 rectangle " " as System <<system>> {
