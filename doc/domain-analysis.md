@@ -168,3 +168,10 @@ travel_updates   ...>   booking_logger
 ![](domain-analysis-mp.2.svg)
 
 </details>
+
+
+## 2023-09-13
+
+We enhanced the design on our own and regrouped to compare. After few hours of brainstroming we got a more precise picture
+
+![](meeting2/domain-analysis-meeting2.svg)

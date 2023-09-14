@@ -1,8 +1,4 @@
-# Additional Clarifications
-
-[Answers](https://docs.google.com/document/d/1xHpte5IOjMEBA39211Z3uUwl1p5yXJ7PrCGKUmTmwQE/edit?pli=1)
-
-## Glossary
+# Glossary
 
 | Term     | Description                                                                                                   |
 |----------|---------------------------------------------------------------------------------------------------------------|
