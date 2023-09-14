@@ -25,7 +25,7 @@
 - Domain Design
 - [ADR](/doc/adr)
 - Architecture Analysis
-  - [Architecture Characteristics](/doc/meeting2/architecture-characteristics.md)
+  - [Architecture Characteristics](/doc/architecture-characteristics.md)
   - Architecture Style
     - Start with mention that
       - analysis is done technology agnostic [cloud/on prem ]
