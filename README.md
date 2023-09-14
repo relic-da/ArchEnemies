@@ -2,33 +2,30 @@
 
 ## Members
 
-- Alvaro Salvador [[LinkedIn](https://www.linkedin.com/in/alvarorafael/)]
-- Anand Bajpai [[LinkedIn](https://www.linkedin.com/in/bajpai-anand)]
-- Constantine Korobov [[LinkedIn](https://www.linkedin.com/in/ckorobov/)]
-- Mirco Paccusse [[LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)]
-- Sergiy Shelekh [[LinkedIn](https://www.linkedin.com/in/proxitrone/)]
+- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/]
+- Anand Bajpai [LinkedIn](https://www.linkedin.com/in/bajpai-anand)
+- Constantine Korobov [LinkedIn](https://www.linkedin.com/in/ckorobov/)
+- Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
+- Sergiy Shelekh [LinkedIn](https://www.linkedin.com/in/proxitrone/)
 
 ## Problem/Mission
 
 - [Problem statement](/problem.md)
-- Additional Clarifications
-- Requirements
-  - Business
-  - Technical/Architecture
+- [Glossary](/doc/glossary.md)
+- [Additional Clarifications](/doc/clarification.md)
+- [Requirements](/doc/requirenments.md)
+  - [Business / Functional](/doc/requirenments.md#functional)
+  - [Technical/Architecture](/doc/requirenments.md#architecture-characteristics)
 - Assumptions and Constraints
 
 ## Solution
 
 - Actors and Actions
 - Event Storming [[about](https://www.eventstorming.com/)]
-- [[Q: Where do we priortize actions?]]
+- Domain Design
 - [ADR](/doc/adr)
 - Architecture Analysis
-  - Architecture Characteristics
-    - Identify *driving* architecture Characteristic using [Architecture Characteristics Worksheet](https://www.developertoarchitect.com/downloads/architecture-characteristics-worksheet.pdf) and small description why they are relevent
-    - Mark top three driving Characteristics
-    - | Rank | Characteristic | Relevence |
-    - [[Q: How we mention implicit and other characteristics? ]]
+  - [Architecture Characteristics](/doc/architecture-characteristics.md)
   - Architecture Style
     - Start with mention that
       - analysis is done technology agnostic [cloud/on prem ]
@@ -36,7 +33,6 @@
       - Refer [Architecture Styles Worksheet](https://www.developertoarchitect.com/downloads/architecture-styles-worksheet.pdf) and identify 2/3 style which match well
       - Refer ADRs for different styles evalauted
       - Confirm decision and add iterate the reason.
-- Domain Design [[Q: Would this come first of Architecture Styles?]]
 - System Architecture
   - Services [In case of microservices]
   - Core and Plugins [In case of microkernel]
