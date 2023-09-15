@@ -1,12 +1,18 @@
 # O'Reilly Architecture Katas 2023 - ArchEnemies
 
-## Members
 
-- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/)
-- Anand Bajpai [LinkedIn](https://www.linkedin.com/in/bajpai-anand)
-- Constantine Korobov [LinkedIn](https://www.linkedin.com/in/ckorobov/)
-- Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
-- Sergiy Shelekh [LinkedIn](https://www.linkedin.com/in/proxitrone/)
+* [Mission The Road Warrior](#mission-the-road-warrior)
+* [Members](#members)
+  * [Challenge](#challenge)
+* [Approach](#approach)
+* [Actor/Action](#actor/action)
+* [Use cases](#use-cases)
+* [Context](#context)
+* [Container](#container)
+* [Deployment](#deployment)
+* [Cost Analysis](#cost-analysis)
+* [Architectural Fitness](#architectural-fitness)
+* [References](#references)
 
 ## Mission The Road Warrior
 
@@ -14,6 +20,14 @@
 
 >A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
 
+## Members
+
+- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/)
+- Anand Bajpai [LinkedIn](https://www.linkedin.com/in/bajpai-anand)
+- Constantine Korobov [LinkedIn](https://www.linkedin.com/in/ckorobov/)
+- Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
+- Sergiy Shelekh [LinkedIn](https://www.linkedin.com/in/proxitrone/)
+ 
 ### Challenge
 
 - [Problem statement](/problem.md)
