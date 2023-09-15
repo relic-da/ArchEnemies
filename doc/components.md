@@ -17,8 +17,8 @@
 
 ## Third party integration
 
-- Agency integration?
-- GDS integration?
+- Agency connector
+- GDS connector
 - Sharer?
 
 
