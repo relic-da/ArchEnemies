@@ -2,7 +2,7 @@
 
 ## Members
 
-- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/]
+- Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/)
 - Anand Bajpai [LinkedIn](https://www.linkedin.com/in/bajpai-anand)
 - Constantine Korobov [LinkedIn](https://www.linkedin.com/in/ckorobov/)
 - Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
