@@ -1,6 +1,8 @@
 
 @startuml
 !include <c4/C4_Component.puml>  
+!theme aws-orange
+skinparam BackgroundColor white
 ' uncomment the following line and comment the first to use locally
 ' !include C4_Component.puml
 
@@ -10,10 +12,12 @@ title Component diagram for for **Road Warrior** app\n - **Mail integration**
 
 
 Container_Boundary(mail_integration, "Mail integration") {
-    Component(mail_poller, "Poller", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
-    Component(mail_listener, "Listener", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
-    Component(mail_filter, "Filter", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
+Component(mail_poller, "Poller", "retrieve travel via mails", "Poll mail from the upstream provider")
+Component(mail_listener, "Listener", "receive forwarded mail", "users allow forwarding mails to the system")
+Component(mail_filter, "Filter", "select interesting mails", "can white/black list mails based on a predefined criterias")
 
+    Rel(mail_poller, mail_filter, "Forward")
+    Rel(mail_listener, mail_filter, "Forward")
 
 }
 
@@ -23,7 +27,7 @@ System_Ext(email_provider, "E-mail provider", "User mail provider.")
 
 
 Rel(mail_filter, booking_interface, "update")
-Rel(email_provider, mail_listener, "")
+Rel(email_provider, mail_listener, "Receiving mails")
 Rel_Back(email_provider, mail_poller, "")
 
 
