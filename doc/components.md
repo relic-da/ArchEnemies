@@ -1,14 +1,34 @@
 # Components index
 
+## Mail integration
+
 - Mail poller
 - Mail filterer
-- Sharer
+
+## Booking core
+
 - Booking CRUD
 - Booking storage
 - Booking tracker
+
+## Notification
+
 - Notifier
-- Agency integration
-- GDS integration
+
+## Third party integration
+
+- Agency integration?
+- GDS integration?
+- Sharer?
+
+
+## Help service
+
+- Help?
+
+
+## Data Analytics
+
 - Data reporter
+- Analytics storage?
 - Analytics exporter
-- Help
