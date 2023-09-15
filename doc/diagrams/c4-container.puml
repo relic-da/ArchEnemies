@@ -1,7 +1,6 @@
 @startuml
 '!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
 !include <c4/C4_Container.puml>  
-
 'ref http://plantuml.com/stdlib
 !include <office/Users/user.puml>
 !include <office/Users/mobile_user.puml>
@@ -15,26 +14,20 @@ title Container diagram for Internet Banking System
 Person(customer  , Customer , "<$user>   <$mobile_user>" )
 
 System_Boundary(c1, "The Road Warrior") {
-'    Container(web_app, "Web Application", "Java, Spring MVC", "Delivers the static content and the Internet banking SPA")
-'    Container(spa, "Single-Page App", "JavaScript, Angular", "Provides all the Internet banking functionality to cutomers via their web browser")
-'    Container(mobile_app, "Mobile App", "C#, Xamarin", "Provides a limited subset of the Internet banking functionality to customers via their mobile device")
-together {
-Container(booking_interface, "Booking interface", "", "access to the database")
-ContainerDb(booking_db, "Booking storage", "SQL Database", "Keep **PNR** info and update of the travels")
-}
 
-Container(booking_tracker, "Booking tracker", "", "make sure we get update from")
+Container(booking_core, "Booking core", "", "Booking interface\nBooking tracker\nBooking storage")
+
 '    Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
 Container(analytics, "Analytics", "", "Data reporter\nAnaytics storage\nAnalytics exporter")
-Container(mail_poller, "Mail integration", "", "poller\nlistener\nfilterer\n\nscrape mails from the active users")
+Container(mail_poller, "Mail integration", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
 Container(collector_agencies, "Collector Agencies", "...", "Interact with Agencies and collect booking updates")
 
-together {
+'together {
 Container(notifier, "Update notifier", "", "Generate update for the user")
 Container(help, "help gateway", "...", "")
 Container(front_end, "Front end", "...", "")
 Container(sharer, "Share", "", "allow for sharing trip")
-}
+'}
 
 }
 
@@ -43,43 +36,43 @@ System_Ext(email_provider, "E-mail provider", "User mail provider.")
 System_Ext(third_parties, "Third parties")
 System_Ext(social_media, "Social Media", "Different Social media")
 System_Ext(ext_agencies, "External Agencies", "GDS [Amadeus|Travelport|Sabre]\nAgencies [hotel/flight/car] supplier")
- 
-'Rel(customer, web_app, "Uses", "HTTPS")
-'Rel(customer, spa, "Uses", "HTTPS")
-'Rel(customer, mobile_app, "Uses")
-notifier -[hidden]- mail_poller
 
-mail_poller -[hidden]- collector_agencies
+'notifier -[hidden]- mail_poller
+
+'mail_poller -[hidden]- collector_agencies
+sharer -[hidden]- analytics
+analytics -[hidden]- mail_poller
 
 Rel_Back(customer, notifier, "updates")
 Rel(customer, front_end, "updates")
 
-Rel(front_end, booking_interface, "")
+Rel(front_end, booking_core, "")
 
 Rel_Back_Neighbor(email_provider, mail_poller, "")
-Rel_Neighbor(mail_poller, booking_interface, "")
+Rel_Neighbor(mail_poller, booking_core, "")
 
 Rel(collector_agencies, ext_agencies,  "")
-Rel(booking_interface, collector_agencies, "")
-Rel_Back_Neighbor(collector_agencies, booking_tracker, "")
-Rel_Back(booking_interface, booking_tracker, "")
+Rel(booking_core, collector_agencies, "")
+'Rel_Back_Neighbor(collector_agencies, booking_core, "")
 
 
-Rel(analytics, booking_db, "")
-Rel_Neighbor(booking_interface, booking_db, "")
-booking_db -[hidden]-- mail_poller
+Rel(analytics, booking_core, "")
 
 third_parties -[hidden]-email_provider
 
+'Rel_Back(customer, analytics, "")
+customer -- analytics
 Rel_Neighbor(third_parties, analytics, "monetizing data")
-Rel_Back(customer, analytics, "")
 
 Rel(customer, help, "")
-Rel(help, booking_interface, "")
-Rel_Back(notifier, booking_tracker, "")
+Rel(help, booking_core, "")
+Rel_Back(notifier, booking_core, "")
 
-Rel(customer, sharer, "")
-Rel_Neighbor(sharer, social_media, "")
+Rel_Back(customer, sharer, "link to person")
+'Rel_Neighbor(social_media, social_media, "")
+'Rel_Neighbor(social_media, sharer, "")
+
+Rel_Back(social_media, sharer, "Share trip")
 
 
 
