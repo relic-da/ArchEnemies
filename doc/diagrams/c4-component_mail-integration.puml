@@ -1,0 +1,31 @@
+
+@startuml
+!include <c4/C4_Component.puml>  
+' uncomment the following line and comment the first to use locally
+' !include C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Component diagram for for **Road Warrior** app\n - **Mail integration**
+
+
+Container_Boundary(mail_integration, "Mail integration") {
+    Component(mail_poller, "Poller", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
+    Component(mail_listener, "Listener", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
+    Component(mail_filter, "Filter", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
+
+
+}
+
+Component(booking_interface, "Booking interface", "MVC Rest Controller", "Access to all operation in and out of the Storage\n\nCrud operations")
+
+System_Ext(email_provider, "E-mail provider", "User mail provider.")
+
+
+Rel(mail_filter, booking_interface, "update")
+Rel(email_provider, mail_listener, "")
+Rel_Back(email_provider, mail_poller, "")
+
+
+
+@enduml
