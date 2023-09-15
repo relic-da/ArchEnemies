@@ -1,5 +1,18 @@
 # O'Reilly Architecture Katas 2023 - ArchEnemies
 
+* [Members](#members)
+* [Mission The Road Warrior](#mission-the-road-warrior)
+  * [Challenge](#challenge)
+* [Approach](#approach)
+* [Actor/Action](#actor/action)
+* [Use cases](#use-cases)
+* [Context](#context)
+* [Container](#container)
+* [Deployment](#deployment)
+* [Cost Analysis](#cost-analysis)
+* [Architectural Fitness](#architectural-fitness)
+* [References](#references)
+
 ## Members
 
 - Alvaro Salvador [LinkedIn](https://www.linkedin.com/in/alvarorafael/)
@@ -13,6 +26,7 @@
 ![](/assets/logo_road_warrior.png)
 
 >A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
+
 
 ### Challenge
 
