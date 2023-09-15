@@ -6,8 +6,8 @@
 * [Approach](#approach)
 * [Actor/Action](#actor/action)
 * [Use cases](#use-cases)
-* [Context](#context)
-* [Container](#container)
+* [Architecture Analysis](#architecture-analysis)
+* [Architecture Modeling](#architecture-modeling)
 * [ADR](#adr)
 * [Deployment](#deployment)
 * [Cost Analysis](#cost-analysis)
@@ -37,7 +37,7 @@
 
 ## Approach
 
-We follow actor/action model to begin with. We identify the stakeholder and actions they need to perform. We, then, create actors who will help stakeholder perform those actions. Next, we find interactions among actors. This provides us high level view of actors components/services required in the system, their relation to stakeholders and their (inter)dependency. 
+We follow actor/action model to begin with. We identify the actors and actions they need to perform. We, then, create components which will enable actors to perform specific actions. Next, we find interactions among actors. This provides us high level view of actors components required in the system, their relation to stakeholders and their (inter)dependency. 
 
 We create use case diagrams to visualize the functional requirements to assists us making design choices and understanding the system on more granular level.
 
@@ -89,7 +89,7 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
 - [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
 - [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
-- [Efficient erythemal for booking tracker](/doc/adr/0006-efficient-oriented-algorithm-for-booking-tracker.md)
+- [Efficient erythemal for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
 
 
 ## Deployment
