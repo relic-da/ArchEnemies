@@ -14,6 +14,8 @@ Below described high level interaction process to gather required data to suppor
 
 ![](./analytics_storage.svg)
 
+Extra interactions with third parties APIs such GDS and/or agencies may be arranged in order to obtain analytic data regarding the bookings in scope of a report. This date may not be available in the booking storage as may not be required to be requested to maintain the booking tracking process, but useful in context with cross analysis and reporting functionality.
+
 ### User report generation on-demand
 
 User on demand may request yearly generated reports via the Web/Mobile App.
