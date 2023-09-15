@@ -1,33 +1,37 @@
-# Yearly reports
+# Use case title
 
 ## Description
 
 ## Interaction
 
+
 ```plantuml
-title Yearly reports use case
+@startuml use_case_markdown_filename
 !theme aws-orange
+
 skinparam BackgroundColor white
 skinparam actorstyle awesome
 autonumber 1
 
-participant "Reporter" as reporter
-participant "Booking CRUD" as booking_crud
-participant "Reporter" as reporter
-participant "Booking DB" as booking_db
-participant "Reporting Storage" as reporting_storage
-participant "App" as app
 actor "User" as user
+'participant "Mail\npoller" as mail_poller
+'participant "Mail\nlistener" as mail_listener
+'participant "Mail\nfilterer" as mail_filterer
+'participant "Booking\ninterface" as booking_interface
+'participant "Booking\nstorage" as booking_storage
+'participant "Booking\ntracker" as booking_tracker
+'participant "Notifier" as notifier
+'participant "Agency\nconnector" agency_connector
+'participant "GDS\nconnector" as gds_connector
+'participant "Sharer" as sharer
+'participant "Social Media\nconnector" as social_connector
+'participant "Help\nGateway" as help_gateway
+'participant "Data\nExporter" as data_exporter
+'participant "Analytics\nGenerator" as analytics_generator
+'participant "Analytics\nStorage" as analytics_storage
+'participant "Analytics\nExporter" as analytics_exporter
+'participant "Web" as web
+'participant "App" as app
 
-reporter -> booking_crud: Get data
-booking_crud -> booking_db
-booking_db -> reporting_storage: Poll every minute
-note right
-Getting finished
-bookings per user
-end note
-reporting_storage -> reporter
-reporter -> app
-app -> user
-
+@enduml
 ```

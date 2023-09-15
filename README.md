@@ -39,6 +39,16 @@
   - Core [made of Services] and Plugin Design [microservices + microkernel]
   - Other details based on style chosen
 
+## Use cases
+
+- [User add booking manually](./doc/use_cases/user_add_booking_manually.md)
+- [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
+- [User share trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
+- [User share with other user(s) trip information](./doc/use_cases/user_share_with_other_user.md)
+- [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
+- [User yearly reports](./doc/use_cases/user_yearly_reports.md)
+- [Data analytics and information export/exposure](/doc/use_cases/analytics_and_reporting.md)
+
 ## Deployment
 
 ## Cost Analysis
