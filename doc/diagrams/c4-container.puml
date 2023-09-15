@@ -8,6 +8,7 @@
 
 LAYOUT_WITH_LEGEND()
 
+skinparam linetype ortho
 
 title Container diagram for Internet Banking System
 
@@ -17,43 +18,73 @@ System_Boundary(c1, "The Road Warrior") {
 '    Container(web_app, "Web Application", "Java, Spring MVC", "Delivers the static content and the Internet banking SPA")
 '    Container(spa, "Single-Page App", "JavaScript, Angular", "Provides all the Internet banking functionality to cutomers via their web browser")
 '    Container(mobile_app, "Mobile App", "C#, Xamarin", "Provides a limited subset of the Internet banking functionality to customers via their mobile device")
-ContainerDb(booking_db, "Booking DB", "SQL Database", "Keep **PNR** info and update of the travels")
+together {
+Container(booking_interface, "Booking interface", "", "access to the database")
+ContainerDb(booking_db, "Booking storage", "SQL Database", "Keep **PNR** info and update of the travels")
+}
+
+Container(booking_tracker, "Booking tracker", "", "make sure we get update from")
 '    Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
-Container(analytics, "Analytics", "", "")
+Container(analytics, "Analytics", "", "Data reporter\nAnaytics storage\nAnalytics exporter")
+Container(mail_poller, "Mail integration", "", "poller\nlistener\nfilterer\n\nscrape mails from the active users")
+Container(collector_agencies, "Collector Agencies", "...", "Interact with Agencies and collect booking updates")
+
+together {
+Container(notifier, "Update notifier", "", "Generate update for the user")
+Container(help, "help gateway", "...", "")
+Container(front_end, "Front end", "...", "")
 Container(sharer, "Share", "", "allow for sharing trip")
-Container(mail_poller, "Mail poller", "", "scrape mails from the active users")
-    Container(notifier, "Update notifier", "", "Generate update for the user")
-    Container(collector_agencies, "Collector Agencies", "...", "Interact with Agencies and collect booking updates")
+}
 
 }
 
 
 System_Ext(email_provider, "E-mail provider", "User mail provider.")
-System_Ext(social_media, "Social Media", "Different Social media")
 System_Ext(third_parties, "Third parties")
+System_Ext(social_media, "Social Media", "Different Social media")
 System_Ext(ext_agencies, "External Agencies", "GDS [Amadeus|Travelport|Sabre]\nAgencies [hotel/flight/car] supplier")
  
 'Rel(customer, web_app, "Uses", "HTTPS")
 'Rel(customer, spa, "Uses", "HTTPS")
 'Rel(customer, mobile_app, "Uses")
+notifier -[hidden]- mail_poller
+
+mail_poller -[hidden]- collector_agencies
+
 Rel_Back(customer, notifier, "updates")
+Rel(customer, front_end, "updates")
 
-notifier -[hidden]- collector_agencies
-collector_agencies -[hidden] sharer
-sharer -[hidden] analytics
+Rel(front_end, booking_interface, "")
 
-'Rel_Neighbor(web_app, spa, "Delivers")
-'Rel(spa, backend_api, "Uses", "async, JSON/HTTPS")
-'Rel(mobile_app, backend_api, "Uses", "async, JSON/HTTPS")
-'Rel_Back_Neighbor(database, backend_api, "Reads from and writes to", "sync, JDBC")
+Rel_Back_Neighbor(email_provider, mail_poller, "")
+Rel_Neighbor(mail_poller, booking_interface, "")
+
+Rel(collector_agencies, ext_agencies,  "")
+Rel(booking_interface, collector_agencies, "")
+Rel_Back_Neighbor(collector_agencies, booking_tracker, "")
+Rel_Back(booking_interface, booking_tracker, "")
 
 
-'Rel(customer, road_warrior, "Uses")
-'Rel_Back(customer, road_warrior, "Notify/Yearly Reports")
-'Rel_Back(customer, mail_system, "Sends e-mails to")
-'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")
-Rel_Back_Neighbor(mail_poller, email_provider, "Poll")
-Rel_Back_Neighbor(ext_agencies, collector_agencies, "Update booking")
-Rel(sharer, social_media, "share")
-Rel(analytics, third_parties, "analytics reports") 
+Rel(analytics, booking_db, "")
+Rel_Neighbor(booking_interface, booking_db, "")
+booking_db -[hidden]-- mail_poller
+
+third_parties -[hidden]-email_provider
+
+Rel_Neighbor(third_parties, analytics, "monetizing data")
+Rel_Back(customer, analytics, "")
+
+Rel(customer, help, "")
+Rel(help, booking_interface, "")
+Rel_Back(notifier, booking_tracker, "")
+
+Rel(customer, sharer, "")
+Rel_Neighbor(sharer, social_media, "")
+
+
+
+
+
+
+
 @enduml
