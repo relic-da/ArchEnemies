@@ -3,11 +3,12 @@
 ## Mail integration
 
 - Mail poller
+- Mail listener
 - Mail filterer
 
 ## Booking core
 
-- Booking CRUD
+- Booking interface
 - Booking storage
 - Booking tracker
 
@@ -17,18 +18,27 @@
 
 ## Third party integration
 
-- Agency integration?
-- GDS integration?
+- Agency connector
+- GDS connector
 - Sharer?
+- Social Media connector
 
 
 ## Help service
 
-- Help?
+- Help Gateway
 
 
 ## Data Analytics
 
-- Data reporter
-- Analytics storage?
-- Analytics exporter
+- Data exporter
+- Analytics generator ?
+- Analytics storage
+- Analytics exporter ?
+
+
+
+## Front End
+
+- Web
+- App
