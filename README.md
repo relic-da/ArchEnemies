@@ -67,7 +67,7 @@ We use ADR approach to make a informed decision for all important architecture d
 ## Architecture Analysis
 
 - [Identify architecture characteristics](/doc/md/arch-char.md)
-- Identify deserving architecture style(s)
+- [Identify deserving architecture style(s)](/doc/md/arch-style.md)
 
 ## Architecture Modeling
 - Context

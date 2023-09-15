@@ -1,4 +1,4 @@
-While identifying suitable architecture style for the system ([ADR-0002](/doc/adr/0002-architecture-style.md)), 
+While identifying suitable architecture style for the system ([ADR-0002](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)), 
 we identify microservices and event driven as prominant arch styles.
 
 Furthermore, we identified
