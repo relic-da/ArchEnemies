@@ -33,7 +33,6 @@
 
 - [Problem statement](/doc/md/problem.md)
 - [Additional Clarifications](/doc/md/clarification.md)
-- Assumptions and Constraints
 - [Glossary](/doc/md/glossary.md)
 
 ## Approach
