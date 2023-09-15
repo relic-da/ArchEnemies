@@ -1,0 +1,59 @@
+@startuml
+'!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+!include <c4/C4_Container.puml>  
+
+'ref http://plantuml.com/stdlib
+!include <office/Users/user.puml>
+!include <office/Users/mobile_user.puml>
+
+LAYOUT_WITH_LEGEND()
+
+
+title Container diagram for Internet Banking System
+
+Person(customer  , Customer , "<$user>   <$mobile_user>" )
+
+System_Boundary(c1, "The Road Warrior") {
+'    Container(web_app, "Web Application", "Java, Spring MVC", "Delivers the static content and the Internet banking SPA")
+'    Container(spa, "Single-Page App", "JavaScript, Angular", "Provides all the Internet banking functionality to cutomers via their web browser")
+'    Container(mobile_app, "Mobile App", "C#, Xamarin", "Provides a limited subset of the Internet banking functionality to customers via their mobile device")
+ContainerDb(booking_db, "Booking DB", "SQL Database", "Keep **PNR** info and update of the travels")
+'    Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
+Container(analytics, "Analytics", "", "")
+Container(sharer, "Share", "", "allow for sharing trip")
+Container(mail_poller, "Mail poller", "", "scrape mails from the active users")
+    Container(notifier, "Update notifier", "", "Generate update for the user")
+    Container(collector_agencies, "Collector Agencies", "...", "Interact with Agencies and collect booking updates")
+
+}
+
+
+System_Ext(email_provider, "E-mail provider", "User mail provider.")
+System_Ext(social_media, "Social Media", "Different Social media")
+System_Ext(third_parties, "Third parties")
+System_Ext(ext_agencies, "External Agencies", "GDS [Amadeus|Travelport|Sabre]\nAgencies [hotel/flight/car] supplier")
+ 
+'Rel(customer, web_app, "Uses", "HTTPS")
+'Rel(customer, spa, "Uses", "HTTPS")
+'Rel(customer, mobile_app, "Uses")
+Rel_Back(customer, notifier, "updates")
+
+notifier -[hidden]- collector_agencies
+collector_agencies -[hidden] sharer
+sharer -[hidden] analytics
+
+'Rel_Neighbor(web_app, spa, "Delivers")
+'Rel(spa, backend_api, "Uses", "async, JSON/HTTPS")
+'Rel(mobile_app, backend_api, "Uses", "async, JSON/HTTPS")
+'Rel_Back_Neighbor(database, backend_api, "Reads from and writes to", "sync, JDBC")
+
+
+'Rel(customer, road_warrior, "Uses")
+'Rel_Back(customer, road_warrior, "Notify/Yearly Reports")
+'Rel_Back(customer, mail_system, "Sends e-mails to")
+'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")
+Rel_Back_Neighbor(mail_poller, email_provider, "Poll")
+Rel_Back_Neighbor(ext_agencies, collector_agencies, "Update booking")
+Rel(sharer, social_media, "share")
+Rel(analytics, third_parties, "analytics reports") 
+@enduml

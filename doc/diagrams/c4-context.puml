@@ -1,0 +1,31 @@
+@startuml
+!include <c4/C4_Context.puml>  
+
+'ref http://plantuml.com/stdlib
+!include <office/Users/user.puml>
+!include <office/Users/mobile_user.puml>
+
+'LAYOUT_WITH_LEGEND
+
+hide stereotype
+
+title \n    System Context diagram for **Road Warrior** app\n\n
+
+Person(customer  , Customer , "<$user>   <$mobile_user>" )
+
+System(road_warrior, "The Road Warrior", "Allows customers to view information related to their trips. \nUser can add , update or delete existing reservation.\n\nUpdate from travel booking should reflecte in the app within 5m from the source system")
+
+System_Ext(email_provider, "E-mail provider", "User mail provider.")
+System_Ext(social_media, "Social Media", "Different Social media")
+System_Ext(third_parties, "Third parties")
+System_Ext(ext_agencies, "External Agencies", "GDS [Amadeus|Travelport|Sabre]\nAgencies [hotel/flight/car] supplier")
+
+Rel(customer, road_warrior, "Uses")
+Rel_Back(customer, road_warrior, "Notify/Yearly Reports")
+'Rel_Back(customer, mail_system, "Sends e-mails to")
+'Rel_Neighbor(banking_system, mail_system, "Sends e-mails", "SMTP")
+Rel_Back_Neighbor(road_warrior, email_provider, "Poll")
+Rel_Neighbor(ext_agencies, road_warrior, "Update booking")
+Rel(road_warrior, social_media, "share")
+Rel(road_warrior, third_parties, "analytics reports")
+@enduml
