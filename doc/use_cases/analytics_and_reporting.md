@@ -9,37 +9,17 @@ Data analytics generator creates statistical reports on a scheduled basis and st
 
 ## Interaction
 
+### Analytics storage
 
-```plantuml
-@startuml use_case_markdown_filename
-!theme aws-orange
+Same process as described for [Yearly user reports](./user_yearly_report.md) on _Analytics Storage_ is used in order to gather and compile all the required data which can be offered to third parties.
 
-skinparam BackgroundColor white
-skinparam actorstyle awesome
-autonumber 1
+![](./analytics_storage.svg)
 
-actor "User" as user
-'participant "Mail\npoller" as mail_poller
-'participant "Mail\nlistener" as mail_listener
-'participant "Mail\nfilterer" as mail_filterer
-'participant "Booking\ninterface" as booking_interface
-'participant "Booking\nstorage" as booking_storage
-'participant "Booking\ntracker" as booking_tracker
-'participant "Notifier" as notifier
-'participant "Agency\nconnector" agency_connector
-'participant "GDS\nconnector" as gds_connector
-'participant "Sharer" as sharer
-'participant "Social Media\nconnector" as social_connector
-'participant "Help\nGateway" as help_gateway
-'participant "Data\nExporter" as data_exporter
-'participant "Analytics\nGenerator" as analytics_generator
-'participant "Analytics\nStorage" as analytics_storage
-'participant "Analytics\nExporter" as analytics_exporter
-'participant "Web" as web
-'participant "App" as app
+### Consumerization of data analytics by third parties
 
-@enduml
-```
+![](./data_analytics_consumerization.svg)
+
 ## Observations
 
-Analytics monetization is a crucial point for the system, since it brings revenue for the company. Data analytics generator and Analytics storage components need to be scalable to handle ever growing amout of users, their bookings, and new types of metrics. Extensibility is in the foundation of the Analytics exporter component so that new ways to deliver metrics and make the 3rd parties engaged can be added.
+- Analytics monetization is a crucial point for the system, since it brings revenue for the company. Data analytics generator and Analytics storage components need to be scalable to handle ever growing amout of users, their bookings, and new types of metrics.
+- Extensibility is in the foundation of the Analytics exporter component so that new ways to deliver metrics and make the 3rd parties engaged can be added.
