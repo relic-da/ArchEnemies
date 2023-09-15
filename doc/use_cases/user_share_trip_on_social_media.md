@@ -1,6 +1,6 @@
 # User share trip information in social media
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

@@ -1,6 +1,6 @@
 # Agency update booking status
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

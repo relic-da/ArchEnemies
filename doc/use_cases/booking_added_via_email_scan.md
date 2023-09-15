@@ -1,6 +1,6 @@
 # Booking added via email scan
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

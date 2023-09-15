@@ -1,6 +1,6 @@
 # User shares trip information with other user(s)
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

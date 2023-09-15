@@ -1,6 +1,6 @@
 # User adds manually a booking into the system
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

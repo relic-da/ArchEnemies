@@ -1,6 +1,6 @@
 # Analytical metrics are generated and exported to 3rd parties
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 

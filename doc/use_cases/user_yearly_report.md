@@ -1,6 +1,6 @@
 # Yearly report is generated and sent to a user
 
-[Home](../../README.md)
+[Home](../../README.md#use-cases)
 
 ## Description
 
