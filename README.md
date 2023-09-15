@@ -70,13 +70,18 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Identify deserving architecture style(s)](/doc/md/arch-style.md)
 
 ## Architecture Modeling
-- Context
-- Container
-- Component
 
-
-- [ADR](/doc/adr)
-- [System Architecture](/system_arch.md)
+* [C4](./doc/c4.md)
+  * [Context](./doc/c4.md#context)
+  * [Container](./doc/c4.md#container)
+  * [Components](./doc/c4.md#components)
+    * [Booking Core](./doc/c4.md#booking-core)
+    * [Mail integration](./doc/c4.md#mail-integration)
+    * [Notifier](./doc/c4.md#notifier)
+    * [Analytics](./doc/c4.md#analytics)
+    * [Front End](./doc/c4.md#front-end)
+* [ADR](/doc/adr)
+* [System Architecture](/system_arch.md)
 
 ## Deployment
 
