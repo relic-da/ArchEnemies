@@ -17,13 +17,6 @@ Component(notifier_analyzer, "Analyze", "", "")
 Component(notifier_web, "Web notifier", "web app notifications", "Allow for generation of notification towards different target. Web or mobile app")
 Component(notifier_mobile, "Mobile notifier", "noti app notifications", "Allow for generation of notification towards different target. Web or mobile app")
 
-' - [ ] Notifier will communicate with 2 user interface systems
-'    - create separte notifier as we can have different 
-'    - it can be extended to mail notifiacation
-'    - `generate notification base on the target type`
-'        we coulkd generate different type of notification
-'        close to hotel
- 
 
 notifier_web <-- notifier_analyzer
 notifier_mobile <-- notifier_analyzer
