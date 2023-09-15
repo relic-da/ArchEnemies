@@ -8,6 +8,7 @@
 * [Use cases](#use-cases)
 * [Context](#context)
 * [Container](#container)
+* [ADR](#adr)
 * [Deployment](#deployment)
 * [Cost Analysis](#cost-analysis)
 * [Architectural Fitness](#architectural-fitness)
@@ -52,7 +53,6 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ![](/doc/actor-action.png)
 
-## Domain Design ?
 
 ## Use cases
 
@@ -86,6 +86,11 @@ We use ADR approach to make a informed decision for all important architecture d
 
 - [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
 - [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
+- [Dedicated storage for analytics](/doc/adr/0003-dedicated-db-for-analytics-usage.md)
+- [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
+- [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
+- [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
+- [Efficient erythemal for booking tracker](/doc/adr/0006-efficient-oriented-algorithm-for-booking-tracker.md)
 
 
 ## Deployment
