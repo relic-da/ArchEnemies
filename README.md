@@ -30,10 +30,10 @@
 
 ### Challenge
 
-- [Problem statement](/problem.md)
-- [Additional Clarifications](/doc/clarification.md)
+- [Problem statement](/doc/md/problem.md)
+- [Additional Clarifications](/doc/md/clarification.md)
 - Assumptions and Constraints
-- [Glossary](/doc/glossary.md)
+- [Glossary](/doc/md/glossary.md)
 
 ## Approach
 
@@ -71,22 +71,22 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Architecture Modeling
 
-* [C4](./doc/c4.md)
-  * [Context](./doc/c4.md#context)
-  * [Container](./doc/c4.md#container)
-  * [Components](./doc/c4.md#components)
-    * [Booking Core](./doc/c4.md#booking-core)
-    * [Mail integration](./doc/c4.md#mail-integration)
-    * [Notifier](./doc/c4.md#notifier)
-    * [Analytics](./doc/c4.md#analytics)
-    * [Front End](./doc/c4.md#front-end)
+* [C4](doc/md/c4.md)
+  * [Context](doc/md/c4.md#context)
+  * [Container](doc/md/c4.md#container)
+  * [Components](doc/md/c4.md#components)
+    * [Booking Core](doc/md/c4.md#booking-core)
+    * [Mail integration](doc/md/c4.md#mail-integration)
+    * [Notifier](doc/md/c4.md#notifier)
+    * [Analytics](doc/md/c4.md#analytics)
+    * [Front End](doc/md/c4.md#front-end)
+
 
 ## ADR
+
 - [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
 - [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
-- 
-* [ADR](/doc/adr)
-* [System Architecture](/system_arch.md)
+
 
 ## Deployment
 
