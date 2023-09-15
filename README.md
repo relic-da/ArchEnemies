@@ -33,7 +33,7 @@
       - Refer [Architecture Styles Worksheet](https://www.developertoarchitect.com/downloads/architecture-styles-worksheet.pdf) and identify 2/3 style which match well
       - Refer ADRs for different styles evalauted
       - Confirm decision and add iterate the reason.
-- System Architecture
+- [System Architecture](/system_arch.md)
   - Services [In case of microservices]
   - Core and Plugins [In case of microkernel]
   - Core [made of Services] and Plugin Design [microservices + microkernel]
