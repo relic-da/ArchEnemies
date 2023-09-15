@@ -1,5 +1,7 @@
 # Yearly report is generated and sent to a user
 
+[Home](../../README.md)
+
 ## Description
 
 Data analytics generator creates yearly statistical reports (agregated metrics and views on user data) on a scheduled basis (for all users who need the report before next schedule: weekly/daily) and stores them in Analytics storage. Analytics exporter reads the report from Analytics storage and delivers the report to a user via front-end (and email).

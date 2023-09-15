@@ -1,5 +1,7 @@
 # User shares trip information with other user(s)
 
+[Home](../../README.md)
+
 ## Description
 
 End user shares trip information with other users in the platform, eg: to share with some work colleagues which are traveling together the hotel and/or flight chosen.
