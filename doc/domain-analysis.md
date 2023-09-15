@@ -185,6 +185,7 @@ We enhanced the design on our own and regrouped to compare. We identified follow
 After few hours of brainstroming we got a more precise picture
 
 ![](meeting2/domain-analysis-meeting2.svg)
+
 ## Domain brainstom
 
 ![](problem-domain-brainstorm.svg)

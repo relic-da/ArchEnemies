@@ -2,15 +2,9 @@
 
 'skinparam handwritten true
 hide stereotype
+skinparam linetype ortho
+'left to right direction
 
-left to right direction
-
-'skinparam linetype ortho
-'skinparam linetype polyline
-
-'60
-'132
-'202
 skinparam rectangle{
     BackgroundColor WhiteSmoke
     borderColor black
@@ -58,11 +52,7 @@ together {
 '    Supplier
 '    ]
 
-    rectangle email_provider <<actor>> [
-    Email Provider
-    ]
 
-rectangle "Social media" as social_media <<actor>>
 }
 
 
@@ -86,14 +76,6 @@ together {
 '    GDS <=[#black] Agencies
 }
 
-rectangle third_parties <<actor>>[
-
-    Third parties  
-
-]
-
-
-rectangle " " as System <<system>> {
 
 rectangle "Collector Agency" as collector_agency <<container>>{
 
@@ -111,13 +93,7 @@ rectangle booking_db <<action>> [
 
 ]
 
-rectangle mail_poller<<action>> [
-mail poller
-]
 
-rectangle mail_filter<<action>>[
-mail filter
-]
 
 rectangle booking_crud <<action>> [
 
@@ -134,65 +110,74 @@ rectangle update_notifier<<action>>[
 Update notifier
 ]
 
-rectangle help<<action>> [
-Help
-]
-
-rectangle sharer<<action>> [
-Sharer
-]
 
 
-rectangle "Data analytics" as data_analytics #line.dotted {
-
-    rectangle data_reporter <<action>> [
-Data Reporter
-]
-rectangle analytics_reporter <<action>>[
-Analytics reporter
-]
-}
-}
 
 '=============================================
 '  Connection
 '=============================================
 
-Agencies        <-[#black]--     collector_agency
-GDS             <-[#black]--     collector_agency
 
 
-email_provider   -[#black]->     mail_poller
-mail_poller      -[#black]->     mail_filter
+rectangle 1 #line.dotted[
+1.
 
-mail_filter      -[#black]-->     booking_crud
-
-collector_agency  <-[#black]--    booking_tracker
-booking_crud      <-[#green]     booking_tracker
-booking_tracker   -[#black]>     update_notifier
-
-collector_agency  <-[#black]-    booking_crud
-help              -[#black]->    booking_crud
-sharer            -[#black]-->    booking_crud
-'
-
-booking_crud      -[#black]-> booking_db
-booking_db        -[#black]-> data_reporter
-
-'=============================================
+get PNR
+]
 
 
-'social_media     -[#black]>    sharer
-sharer     -[#black]>    social_media
+booking_tracker -- 1
+1 -- booking_crud
 
-user             -[#black]->         booking_crud
-user             -[#black]->         sharer
-user             <-[#black]--        data_reporter
-user             <-[#black]          update_notifier
-user             -[#black]->         help
+rectangle 2 #line.dotted[
+2.
 
-analytics_reporter -[#black]> third_parties
+query booking
+]
 
+collector_agency <- 2
+2 - booking_tracker
+
+rectangle 3 #line.dotted[
+3.
+
+query agency
+]
+ 
+
+GDS -- 3
+Agencies -- 3
+
+3 <-- collector_agency
+3 --> collector_agency
+
+ rectangle 4 #line.dotted[
+4.
+
+updaate pn
+
+---
+
+only if change
+]
+
+
+booking_tracker -- 4
+4 - booking_crud
+
+ rectangle 5 #line.dotted[
+5.
+
+updaate db
+
+---
+
+only if change
+]
+ 
+
+booking_crud - 5
+5 -- booking_db
 @enduml
 
 
