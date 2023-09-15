@@ -8,6 +8,7 @@
 * [Use cases](#use-cases)
 * [Context](#context)
 * [Container](#container)
+* [ADR](#adr)
 * [Deployment](#deployment)
 * [Cost Analysis](#cost-analysis)
 * [Architectural Fitness](#architectural-fitness)
@@ -30,10 +31,9 @@
 
 ### Challenge
 
-- [Problem statement](/problem.md)
-- [Additional Clarifications](/doc/clarification.md)
-- Assumptions and Constraints
-- [Glossary](/doc/glossary.md)
+- [Problem statement](/doc/md/problem.md)
+- [Additional Clarifications](/doc/md/clarification.md)
+- [Glossary](/doc/md/glossary.md)
 
 ## Approach
 
@@ -52,7 +52,6 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ![](/doc/actor-action.png)
 
-## Domain Design ?
 
 ## Use cases
 
@@ -67,27 +66,29 @@ We use ADR approach to make a informed decision for all important architecture d
 ## Architecture Analysis
 
 - [Identify architecture characteristics](/doc/md/arch-char.md)
-- Identify deserving architecture style(s)
+- [Identify deserving architecture style(s)](/doc/md/arch-style.md)
 
 ## Architecture Modeling
 
-* [C4](./doc/c4.md)
-  * [Context](./doc/c4.md#context)
-  * [Container](./doc/c4.md#container)
-  * [Components](./doc/c4.md#components)
-    * [Booking Core](./doc/c4.md#booking-core)
-    * [Mail integration](./doc/c4.md#mail-integration)
-    * [Notifier](./doc/c4.md#notifier)
-    * [Analytics](./doc/c4.md#analytics)
-    * [Front End](./doc/c4.md#front-end)
-* ADR
-  * [record-architecture-decisions.md](0001-record-architecture-decisions.md)
-  * [architecture-style.md](0002-architecture-style.md)
-  * [dedicated-db-for-analytics-usage.md](0003-dedicated-db-for-analytics-usage.md)
-  * [store-agency-contact-for-help.md](0004-store-agency-contact-for-help.md)
-  * [data-reporter-and-analytics-generator.md](0005-data-reporter-and-analytics-generator.md)
-  * [efficient-oriented-algorithm-for-booking-tracker.md](0006-efficient-oriented-algorithm-for-booking-tracker.md)
-* [System Architecture](./system_arch.md
+* [C4](doc/md/c4.md)
+  * [Context](doc/md/c4.md#context)
+  * [Container](doc/md/c4.md#container)
+  * [Components](doc/md/c4.md#components)
+    * [Booking Core](doc/md/c4.md#booking-core)
+    * [Mail integration](doc/md/c4.md#mail-integration)
+    * [Notifier](doc/md/c4.md#notifier)
+    * [Analytics](doc/md/c4.md#analytics)
+    * [Front End](doc/md/c4.md#front-end)
+
+## ADR
+
+- [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
+- [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
+- [Dedicated storage for analytics](/doc/adr/0003-dedicated-db-for-analytics-usage.md)
+- [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
+- [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
+- [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
+- [Efficient erythemal for booking tracker](/doc/adr/0006-efficient-oriented-algorithm-for-booking-tracker.md)
 
 ## Deployment
 
