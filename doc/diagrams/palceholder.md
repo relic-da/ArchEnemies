@@ -17,13 +17,19 @@ keeping this to show the diagrams
 </details> 
 
 
-
+## Component Booking Core
 
 ![booking](c4-component_booking-core.png)
 
+## Component Mail integration
+
 ![mail integration](c4-component_mail-integration.png)
 
+## Component Notifier
+
 ![notifier](c4-component_notifier.png)
+
+## Component Analytics
 
 ![analytics](c4-component_analytics.png)
 
