@@ -8,18 +8,63 @@
 - Mirco Paccusse [LinkedIn](https://www.linkedin.com/in/mirco-paccusse-97525012/)
 - Sergiy Shelekh [LinkedIn](https://www.linkedin.com/in/proxitrone/)
 
-## Problem/Mission
+## Mission The Road Warrior
+
+![](/assets/logo_road_warrior.png)
+
+>A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
+
+### Challenge
 
 - [Problem statement](/problem.md)
-- [Glossary](/doc/glossary.md)
 - [Additional Clarifications](/doc/clarification.md)
-- [Requirements](/doc/requirenments.md)
-  - [Business / Functional](/doc/requirenments.md#functional)
-  - [Technical/Architecture](/doc/requirenments.md#architecture-characteristics)
 - Assumptions and Constraints
+- [Glossary](/doc/glossary.md)
 
-## Solution
+## Approach
 
+We follow actor/action model to begin with. We identify the stakeholder and actions they need to perform. We, then, create actors who will help stakeholder perform those actions. Next, we find interactions among actors. This provides us high level view of actors components/services required in the system, their relation to stakeholders and their (inter)dependency. 
+
+We create use case diagrams to visualize the functional requirements to assists us making design choices and understanding the system on more granular level.
+
+Now we understand the desired system behavior better so we qualify the requirements to identify architecture characteristics. These characteristics help us identify the most suitable architecture style for the solution. 
+
+We use C4 model technique to design the architecture, starting with most abstract view of the system and going further in details in each step.
+
+We use ADR approach to make a informed decision for all important architecture decisions.
+
+## Actor/Action
+
+
+![](/doc/actor-action.png)
+
+
+## Use cases
+
+- [User add booking manually](./doc/use_cases/user_add_booking_manually.md)
+- [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
+- [User share trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
+- [User share trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
+- [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
+- [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
+- [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
+
+## Context
+
+
+
+## Container
+
+
+
+
+- Context
+- Container
+- Components
+
+
+
+- Approach
 - Actors and Actions
 - Event Storming [[about](https://www.eventstorming.com/)]
 - Domain Design
@@ -34,20 +79,6 @@
       - Refer ADRs for different styles evalauted
       - Confirm decision and add iterate the reason.
 - [System Architecture](/system_arch.md)
-  - Services [In case of microservices]
-  - Core and Plugins [In case of microkernel]
-  - Core [made of Services] and Plugin Design [microservices + microkernel]
-  - Other details based on style chosen
-
-## Use cases
-
-- [User add booking manually](./doc/use_cases/user_add_booking_manually.md)
-- [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
-- [User share trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
-- [User share trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
-- [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
-- [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
-- [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 
 ## Deployment
 
