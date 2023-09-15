@@ -8,12 +8,12 @@
   
 ## Users
 
-- q2 million active users/week
-- qtotal users: 15 million (user accounts)
+- 2 million active users/week
+- total users: 15 million (user accounts)
 
 ## Functional requirements
 - [ ]  Web and app support for customers
-- [ ]  Poll email looking for travel-related emails q Filter and whitelist certain emails
+- [ ]  Poll email looking for travel-related emails. Filter and whitelist certain emails
 - [ ]  The system must interface with the agency’s
 existing airline, hotel, and car rental interface system to update travel details (delays, cancellations, updates, gate changes, etc.). Updates must be in the app within 5 minutes of an update (better than the competition)
 - [ ]  The system must interface with GDS systems (Appolo/Sabre)
