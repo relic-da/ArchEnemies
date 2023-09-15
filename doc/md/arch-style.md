@@ -6,7 +6,7 @@ We identify following architecture styles best suited for the system
 
 ![](/doc/arch-style-evaulation.png)
 
-Though Space based performs almost as good as others, it lacks in fault tolerance which is one of the the driving characteristic. Along with this, it is not the most affordable and the nature of the application does not warrant elasticity on the levels that of an auctioning or ticketing system, for which space-based is mostly best suited architecture style, see [ADR-0001](/doc/adr/0001-space-based-arch-style.md).  
+Though Space based performs almost as good as others, it lacks in fault tolerance which is one of the the driving characteristic. Along with this, it is not the most affordable and the nature of the application does not warrant elasticity on the levels that of an auctioning or ticketing system, for which space-based is mostly best suited architecture style, see [ADR-0001](/doc/adr/0001-arch-style-space-based.md).  
 
 **We decide to use **event driven** architecture style for the system.**
 

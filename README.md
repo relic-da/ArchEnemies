@@ -80,6 +80,11 @@ We use ADR approach to make a informed decision for all important architecture d
     * [Notifier](./doc/c4.md#notifier)
     * [Analytics](./doc/c4.md#analytics)
     * [Front End](./doc/c4.md#front-end)
+
+## ADR
+- [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
+- [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
+- 
 * [ADR](/doc/adr)
 * [System Architecture](/system_arch.md)
 
