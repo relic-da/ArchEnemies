@@ -80,8 +80,14 @@ We use ADR approach to make a informed decision for all important architecture d
     * [Notifier](./doc/c4.md#notifier)
     * [Analytics](./doc/c4.md#analytics)
     * [Front End](./doc/c4.md#front-end)
-* [ADR](/doc/adr)
-* [System Architecture](/system_arch.md)
+* ADR
+  * [record-architecture-decisions.md](0001-record-architecture-decisions.md)
+  * [architecture-style.md](0002-architecture-style.md)
+  * [dedicated-db-for-analytics-usage.md](0003-dedicated-db-for-analytics-usage.md)
+  * [store-agency-contact-for-help.md](0004-store-agency-contact-for-help.md)
+  * [data-reporter-and-analytics-generator.md](0005-data-reporter-and-analytics-generator.md)
+  * [efficient-oriented-algorithm-for-booking-tracker.md](0006-efficient-oriented-algorithm-for-booking-tracker.md)
+* [System Architecture](./system_arch.md
 
 ## Deployment
 
