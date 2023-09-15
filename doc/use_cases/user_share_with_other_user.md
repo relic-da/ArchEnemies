@@ -1,37 +1,13 @@
-# Use case title
+# User shares trip information with other user(s)
 
 ## Description
 
+End user shares trip information with other users in the platform, eg: to share with some work colleagues which are traveling together the hotel and/or flight chosen.
+
 ## Interaction
 
+![](user_shares_trip_info_with_other_user.svg)
 
-```plantuml
-@startuml use_case_markdown_filename
-!theme aws-orange
+## Observations
 
-skinparam BackgroundColor white
-skinparam actorstyle awesome
-autonumber 1
-
-actor "User" as user
-'participant "Mail\npoller" as mail_poller
-'participant "Mail\nlistener" as mail_listener
-'participant "Mail\nfilterer" as mail_filterer
-'participant "Booking\ninterface" as booking_interface
-'participant "Booking\nstorage" as booking_storage
-'participant "Booking\ntracker" as booking_tracker
-'participant "Notifier" as notifier
-'participant "Agency\nconnector" agency_connector
-'participant "GDS\nconnector" as gds_connector
-'participant "Sharer" as sharer
-'participant "Social Media\nconnector" as social_connector
-'participant "Help\nGateway" as help_gateway
-'participant "Data\nExporter" as data_exporter
-'participant "Analytics\nGenerator" as analytics_generator
-'participant "Analytics\nStorage" as analytics_storage
-'participant "Analytics\nExporter" as analytics_exporter
-'participant "Web" as web
-'participant "App" as app
-
-@enduml
-```
+End user(s) which has received info of trip/booking from another end user can be set optionally by the user originating the info to be subscribed to any change(s) on the booking status. This can allow users to keep track of meaningful changes on them like eg: change of hotel, flight cancellations...
