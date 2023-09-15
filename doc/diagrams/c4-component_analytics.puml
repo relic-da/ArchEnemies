@@ -7,7 +7,7 @@ skinparam BackgroundColor white
 LAYOUT_WITH_LEGEND()
 
 skinparam linetype ortho
-title Container diagram for **Road Warrior** app - Booking core
+title Container diagram for **Road Warrior** app - Analytics
 
 'Person(customer  , Customer , "<$user>   <$mobile_user>" )
 
