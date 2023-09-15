@@ -33,4 +33,8 @@ keeping this to show the diagrams
 
 ![analytics](c4-component_analytics.png)
 
+## Component Front End
+
+
+![Front end](c4-component_front-end.png)
 
