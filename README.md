@@ -38,46 +38,30 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ![](/doc/actor-action.png)
 
+## Domain Design ?
 
 ## Use cases
 
-- [User add booking manually](./doc/use_cases/user_add_booking_manually.md)
+- [User adds booking manually](./doc/use_cases/user_add_booking_manually.md)
 - [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
-- [User share trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
-- [User share trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
+- [User shares trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
+- [User shares trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
 - [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
 - [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 
-## Context
+## Architecture Analysis
 
+- [Identify architecture characteristics](/doc/md/arch-char.md)
+- Identify deserving architecture style(s)
 
-
-## Container
-
-
-
-
+## Architecture Modeling
 - Context
 - Container
-- Components
+- Component
 
 
-
-- Approach
-- Actors and Actions
-- Event Storming [[about](https://www.eventstorming.com/)]
-- Domain Design
 - [ADR](/doc/adr)
-- Architecture Analysis
-  - [Architecture Characteristics](/doc/architecture-characteristics.md)
-  - Architecture Style
-    - Start with mention that
-      - analysis is done technology agnostic [cloud/on prem ]
-      - end goal is to guide techinal implementation and not specify tools and softwares
-      - Refer [Architecture Styles Worksheet](https://www.developertoarchitect.com/downloads/architecture-styles-worksheet.pdf) and identify 2/3 style which match well
-      - Refer ADRs for different styles evalauted
-      - Confirm decision and add iterate the reason.
 - [System Architecture](/system_arch.md)
 
 ## Deployment
