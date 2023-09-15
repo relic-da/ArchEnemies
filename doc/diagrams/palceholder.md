@@ -24,5 +24,7 @@ keeping this to show the diagrams
 
 ![mail integration](c4-component_mail-integration.png)
 
+![notifier](c4-component_notifier.png)
+
 </details>
 
