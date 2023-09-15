@@ -17,7 +17,6 @@ keeping this to show the diagrams
 </details> 
 
 
-<details><summary>Components</summary>
 
 
 ![booking](c4-component_booking-core.png)
@@ -26,5 +25,6 @@ keeping this to show the diagrams
 
 ![notifier](c4-component_notifier.png)
 
-</details>
+![analytics](c4-component_analytics.png)
+
 
