@@ -1,7 +1,5 @@
 # User adds manually a booking into the system
 
-[[_TOC_]]
-
 ## Description
 
 End user uses mobile app or public web interface and adds manually a booking PNR which has been already arranged upfront by the user. This new booking will be set by the user as part of an existing or new trip which will be shown in the dashboard and tracked.
@@ -10,7 +8,7 @@ End user uses mobile app or public web interface and adds manually a booking PNR
 
 ### Booking addition
 
-<div hidden>
+<div class="hidden">
 
 ```plantuml
 @startuml user_add_booking_manually
@@ -27,7 +25,6 @@ participant "Agency\nconnector" as agency_connector
 participant "GDS\nconnector" as gds_connector
 participant "Agency/GDS/Third parties\nStandard API" as third_parties
 participant "Booking\nstorage" as booking_storage
-participant "Booking\ntracker" as booking_tracker
 
 user -> app: Add new booking
 app -> booking_interface: POST operation
@@ -60,8 +57,6 @@ end note
 @enduml
 
 ```
-</div>
-
 ![user_add_booking_manually](./user_add_booking_manually.svg)
 
 ### Booking tracking
