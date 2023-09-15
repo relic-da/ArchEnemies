@@ -1,0 +1,39 @@
+@startuml
+!include <c4/C4_Component.puml>  
+' uncomment the following line and comment the first to use locally
+' !include C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Component diagram for Internet Banking System - API Application
+
+Container(notifier, "Update notifier", "", "Generate update for the user")
+Container(mail_poller, "Mail integration", "retrieve travel via mails", "- poller\n- listener\n- filterer\n\nscrape mails from the active users")
+Container(sharer, "Share", "", "allow for sharing trip")
+
+Container_Boundary(booking_core, "Booking core") {
+Component(booking_interface, "Booking interface", "MVC Rest Controller", "Access to all operation in and out of the Storage\n\nCrud operations")
+Component(booking_tracker, "Booking tracker", "MVC Rest Controller", "Provides customers with a summary of their bank accounts")
+ContainerDb(booking_storage, "Booking storage", "DB", "Provides functionality related to singing in, changing passwords, etc.")
+
+Rel_Neighbor(booking_tracker, booking_interface, "interact")
+Rel(booking_interface, booking_storage, "CRUD")
+}
+
+Container(collector_agencies, "Collector Agencies", "...", "Interact with Agencies and collect booking updates")
+
+Container(front_end, "Front end", "...", "this include web and app")
+
+Container(analytics, "Analytics", "", "Data reporter\nAnaytics storage\nAnalytics exporter")
+
+Rel_Back(collector_agencies, booking_tracker, "Get updates")
+Rel_Back(notifier, booking_tracker, "send")
+Rel(front_end, booking_interface, "CRUD")
+
+
+Rel_Neighbor(booking_storage, analytics, "reports")
+Rel(sharer, booking_interface, "update")
+Rel_Neighbor(booking_interface, mail_poller, "update")
+
+
+@enduml

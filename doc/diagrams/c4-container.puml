@@ -7,9 +7,9 @@
 
 LAYOUT_WITH_LEGEND()
 
-skinparam linetype ortho
+'skinparam linetype ortho
 
-title Container diagram for Internet Banking System
+title \n    Container diagram for **Road Warrior** app\n\n
 
 Person(customer  , Customer , "<$user>   <$mobile_user>" )
 
@@ -51,7 +51,8 @@ Rel(front_end, booking_core, "")
 Rel_Back_Neighbor(email_provider, mail_poller, "")
 Rel_Neighbor(mail_poller, booking_core, "")
 
-Rel(collector_agencies, ext_agencies,  "")
+'Rel(collector_agencies, ext_agencies,  "")
+Rel_Neighbor(collector_agencies, ext_agencies,  "")
 Rel(booking_core, collector_agencies, "")
 'Rel_Back_Neighbor(collector_agencies, booking_core, "")
 
