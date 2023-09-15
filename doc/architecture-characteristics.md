@@ -18,7 +18,7 @@ We will use driving characteristics to identify potential suitable architecture 
 
 ### Implicit Architecture Characteristics
 
-| Requirement                                                     | Charachterstic | Importance |
+| Requirement                                                     | Characteristic | Importance |
 |-----------------------------------------------------------------|----------------|------------|
 | Scan email via API and user forwards email via rule or manually | Security       |            |
 | Store user personal data for long time                          | Security       ||
