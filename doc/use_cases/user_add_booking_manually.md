@@ -11,50 +11,6 @@ End user uses mobile app or public web interface and adds manually a booking PNR
 <div class="hidden">
 
 ```plantuml
-@startuml user_add_booking_manually
-!theme aws-orange
-
-skinparam BackgroundColor white
-skinparam actorstyle awesome
-autonumber 1
-
-actor "User" as user
-participant "App/Web" as app
-participant "Booking\ninterface" as booking_interface
-participant "Agency\nconnector" as agency_connector
-participant "GDS\nconnector" as gds_connector
-participant "Agency/GDS/Third parties\nStandard API" as third_parties
-participant "Booking\nstorage" as booking_storage
-
-user -> app: Add new booking
-app -> booking_interface: POST operation
-booking_interface -> agency_connector
-agency_connector -> third_parties
-
-alt Response NOK
-   third_parties --> agency_connector
-   agency_connector --> booking_interface: Return error
-   booking_interface --> app: Report error looking up the booking
-   app --> user: Report error
-   note over user
-      App shows suggestion on how to recover
-      from error if related with non valid
-      booking PNR
-   end note
-else Response OK
-   third_parties --> agency_connector
-   agency_connector --> booking_interface
-end
-
-booking_interface -> booking_storage
-return Confirm operation
-booking_interface --> app: Confirm operation
-app --> user: Show trip and booking data
-note over user
-   Rich information regarding the
-   booking is shown
-end note
-@enduml
 
 ```
 ![user_add_booking_manually](./user_add_booking_manually.svg)
