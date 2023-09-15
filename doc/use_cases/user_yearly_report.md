@@ -8,37 +8,27 @@ Data analytics generator creates yearly statistical reports (agregated metrics a
 
 ## Interaction
 
+### Analytics storage
 
-```plantuml
-@startuml use_case_markdown_filename
-!theme aws-orange
+Below described high level interaction process to gather required data to support the generation of yearly reports for the users. This process takes care of programmatic export and storage of data into a dedicated analytics datalake which support all reports and analytics consumption.
 
-skinparam BackgroundColor white
-skinparam actorstyle awesome
-autonumber 1
+![](./analytics_storage.svg)
 
-actor "User" as user
-'participant "Mail\npoller" as mail_poller
-'participant "Mail\nlistener" as mail_listener
-'participant "Mail\nfilterer" as mail_filterer
-'participant "Booking\ninterface" as booking_interface
-'participant "Booking\nstorage" as booking_storage
-'participant "Booking\ntracker" as booking_tracker
-'participant "Notifier" as notifier
-'participant "Agency\nconnector" agency_connector
-'participant "GDS\nconnector" as gds_connector
-'participant "Sharer" as sharer
-'participant "Social Media\nconnector" as social_connector
-'participant "Help\nGateway" as help_gateway
-'participant "Data\nExporter" as data_exporter
-'participant "Analytics\nGenerator" as analytics_generator
-'participant "Analytics\nStorage" as analytics_storage
-'participant "Analytics\nExporter" as analytics_exporter
-'participant "Web" as web
-'participant "App" as app
+### User report generation on-demand
 
-@enduml
-```
+User on demand may request yearly generated reports via the Web/Mobile App.
+
+![](./user_report_generation.svg)
+
+### Yearly report notification
+
+Proactive notification is submit to end users of the platform once a year has passed since the user has signed up in the platform, and the relevant yearly report has been made available.
+
+The user will receive a notification via email and on the Web/Mobile application facilitating the access to the report and inviting to explore different highlighted aspects of their activity through the year reported.
+
+![](./yearly_report_notification.svg)
+
 ## Observation
 
-Yearly reports help keep users engaged and understand the value that the RoadWarrior brings them. These reports are displayed as graphs and summaries in the front-end (web/app), and notifications can be sent on the availability as well. In this use-case, analytics storage is scalable to handle the growing number of users and Data analytics generator needs to have a certain degree of elasticity, which can be anticipated since the date of registration for a user is known and stored in the system. 
+- Yearly reports help keep users engaged and understand the value that the RoadWarrior brings them. These reports are displayed as graphs and summaries in the front-end (web/app), and notifications can be sent on the availability as well.
+- In this use-case, analytics storage is scalable to handle the growing number of users and Data analytics generator needs to have a certain degree of elasticity, which can be anticipated since the date of registration for a user is known and stored in the system.
