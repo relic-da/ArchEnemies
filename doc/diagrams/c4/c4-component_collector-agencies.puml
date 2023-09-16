@@ -12,7 +12,7 @@ title Container diagram for **Road Warrior** app - Analytics
 'Person(customer  , Customer , "<$user>   <$mobile_user>" )
 
 
-Container(booking_core, "Booking core", "", "Booking interface\nBooking tracker\nBooking storage")
+Container(booking_core, "Booking core", "", "Booking Engine\nBooking tracker\nBooking storage")
 
 Container_Boundary(collector_agencies, "Collector Agencies") {
 Component(collector_agencies_poll, "Agencies Poller", "...", "Interact with Agencies and collect booking updates")

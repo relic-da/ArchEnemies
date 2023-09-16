@@ -1,18 +1,25 @@
 # O'Reilly Architecture Katas 2023 - ArchEnemies
 
+
+
+<!-- vim-markdown-toc GFM -->
+
 * [Members](#members)
 * [Mission The Road Warrior](#mission-the-road-warrior)
   * [Challenge](#challenge)
 * [Approach](#approach)
-* [Actor/Action](#actor/action)
-* [Use cases](#use-cases)
-* [Architecture Analysis](#architecture-analysis)
-* [Architecture Modeling C4](#architecture-modeling-c4)
-* [ADR](#adr)
+  * [Actor/Action](#actoraction)
+* [Architecture](#architecture)
+  * [Analysis](#analysis)
+  * [ADR](#adr)
+  * [C4 Modeling](#c4-modeling)
+  * [Architectural Fitness](#architectural-fitness)
 * [Deployment](#deployment)
-* [Cost Analysis](#cost-analysis)
-* [Architectural Fitness](#architectural-fitness)
+* [Use cases](#use-cases)
 * [References](#references)
+
+<!-- vim-markdown-toc -->
+
 
 ## Members
 
@@ -47,30 +54,32 @@ We use C4 model technique to design the architecture, starting with most abstrac
 
 We use ADR approach to make a informed decision for all important architecture decisions.
 
-## Actor/Action
+### Actor/Action
 
 
 ![](./doc/actor-action.svg)
 
 
-## Use cases
+## Architecture
 
-- [User adds booking manually](./doc/use_cases/user_add_booking_manually.md)
-- [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
-- [User shares trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
-- [User shares trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
-- [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
-- [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
-- [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
-- [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
-
-## Architecture Analysis
+### Analysis
 
 - [Identify architecture characteristics](./doc/md/arch-char.md)
 - [Identify deserving architecture style(s)](./doc/md/arch-style.md)
 - [Component Index](./doc/md/components.md)
 
-## Architecture Modeling C4
+### ADR
+
+- [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
+- [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
+- [Dedicated storage for analytics](/doc/adr/0003-dedicated-db-for-analytics-usage.md)
+- [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
+- [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
+- [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
+- [Efficiency oriented algorithm for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
+- [Deploying system in cloud or on premise](/doc/adr/0008-deploying-system-in-cloud-or-on-premise.md)
+
+### C4 Modeling
 
 > The C4 model is an "abstraction-first" approach to diagramming software architecture, based upon abstractions that reflect how software architects and developers think about and build software.
 
@@ -84,24 +93,25 @@ We use ADR approach to make a informed decision for all important architecture d
   * [Front End](doc/c4/component-front-end.md)
   * [Agency collector](./doc/c4/component-collector-agencies.md)
 
-## ADR
+### Architectural Fitness
 
-- [Space based architecture style](/doc/adr/0001-arch-style-space-based.md)
-- [Microservices vs Event driven architecture style](/doc/adr/0002-arch-style-microservices-vs-event-driven.md)
-- [Dedicated storage for analytics](/doc/adr/0003-dedicated-db-for-analytics-usage.md)
-- [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
-- [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
-- [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
-- [Efficiency oriented algorithm for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
-- [Deploying system in cloud or on premise](/doc/adr/0008-deploying-system-in-cloud-or-on-premise.md)
+[Implement Architectural Fitness Functions](/doc/md/arch-fitness.md)
 
 ## Deployment
 
 [Guidance on system deployment](/doc/md/deployment.md)
 
-## Architectural Fitness
+## Use cases
 
-[Implement Architectural Fitness Functions](/doc/md/arch-fitness.md)
+- [User adds booking manually](./doc/use_cases/user_add_booking_manually.md)
+- [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
+- [User shares trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
+- [User shares trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
+- [User request help to remediate a booking incident](./doc/use_cases/user_request_help.md)
+- [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
+- [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
+- [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
+- [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
 ## References
 

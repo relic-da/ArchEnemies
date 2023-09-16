@@ -22,16 +22,16 @@ autonumber 1
 
 actor "User" as user
 participant "Web/Mobile App" as app
-participant "Booking\ninterface" as booking_interface
+participant "Booking\ninterface" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Social Media\nconnector" as social_connector
 participant "Social Media\nPublic API" as social_api
 
 user -> app: Access dashboard
-app -> booking_interface: Request trips and booking details
-booking_interface -> booking_storage: Read active user records
+app -> booking_engine: Request trips and booking details
+booking_engine -> booking_storage: Read active user records
 return User records
-booking_interface --> app: User records
+booking_engine --> app: User records
 user -> app: Trigger share in social media
 note over app
     User fill short text which

@@ -23,19 +23,19 @@ autonumber 1
 
 participant "Analytics\nExporter" as analytics_exporter
 participant "Analytics\nStorage" as analytics_storage
-participant "Booking\ninterface" as booking_interface
+participant "Booking\ninterface" as booking_engine
 participant "Third parties\nComplementary services\nconnector" as third_parties_connector
 participant "Third parties API" as third_parties_api
 participant "Booking\nstorage" as booking_storage
 
 analytics_exporter -> analytics_storage: Retrieve report of often used services
 return Report data
-analytics_exporter -> booking_interface: Trigger retrieval of index information
-booking_interface -> third_parties_connector: Get current info on services and events
+analytics_exporter -> booking_engine: Trigger retrieval of index information
+booking_engine -> third_parties_connector: Get current info on services and events
 third_parties_connector -> third_parties_api: Get data
 return Data
-third_parties_connector --> booking_interface
-booking_interface -> booking_storage: Store updated info
+third_parties_connector --> booking_engine
+booking_engine -> booking_storage: Store updated info
 return Store OK
 
 @enduml

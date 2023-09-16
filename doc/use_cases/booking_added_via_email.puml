@@ -20,7 +20,7 @@ autonumber 1
 participant "Booking agency\nEmail service" as agency
 participant "User Email provider or\nEmail phone client" as user_email
 participant "Mail\npoller/listener\nMobile app" as mail_poller
-participant "Booking\ninterface" as booking_interface
+participant "Booking\ninterface" as booking_engine
 participant "Agency/GDS\nconnector" as agency_connector
 participant "Booking\nstorage" as booking_storage
 participant "Booking\ntracker" as booking_tracker
@@ -30,12 +30,12 @@ participant "Web/Mobile App" as app
 
 agency -> user_email: New booking info\nemail (SMTP)
 mail_poller <-> user_email: Periodic email scan (poller)\nor reception (listener)
-mail_poller -> booking_interface: Request for booking processing
-booking_interface -> agency_connector: Query booking details and status
+mail_poller -> booking_engine: Request for booking processing
+booking_engine -> agency_connector: Query booking details and status
 return Status and details
-booking_interface -> booking_storage: Store new booking information
+booking_engine -> booking_storage: Store new booking information
 return New user record added
-booking_interface -> notifier: Send user notification
+booking_engine -> notifier: Send user notification
 notifier -> app: Notify new booking detected
 notifier -> user_email: Notify new booking detected
 @enduml

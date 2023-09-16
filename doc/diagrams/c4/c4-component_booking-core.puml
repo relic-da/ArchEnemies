@@ -18,16 +18,16 @@ Container(mail_poller, "Mail integration", "retrieve travel via mails", "- polle
 Container(sharer, "Share", "Sharing trip information", "content can be shared via Social media or directly ot individual")
 
 Container_Boundary(booking_core, "Booking core") {
-Component(booking_interface, "Booking interface", "Rest Controller", "Provide access to all the booking within the storage. **CRUD** operations")
+Component(booking_engine, "Booking Engine", "Rest Controller", "Provide access to all the booking within the storage. **CRUD** operations")
 Component(booking_tracker, "Booking tracker", "scan for update", "in a time frequency base request information from bookings, This will be based on a proximity alghoritm to possibly limit the amunt of worker needed to gather the update")
 ContainerDb(booking_storage, "Booking storage", "DB", "Booking Storage: Hold information on all bookings")
 
 
-Rel_Neighbor(booking_tracker, booking_interface, "interact")
+Rel_Neighbor(booking_tracker, booking_engine, "interact")
 
-' Rel(booking_interface, booking_storage, "CRUD")
+' Rel(booking_engine, booking_storage, "CRUD")
 
-booking_interface -->booking_storage
+booking_engine -->booking_storage
 }
 
 
@@ -40,12 +40,12 @@ Container(analytics, "Analytics", "Business inteliggence", "Data reporter\nAnayt
 collector_agencies <-- booking_tracker
 
 Rel_Back(notifier, booking_tracker, "send")
-Rel(front_end, booking_interface, "CRUD")
+Rel(front_end, booking_engine, "CRUD")
 
 
 Rel_Neighbor(booking_storage, analytics, "reports")
-Rel(sharer, booking_interface, "update")
-Rel_Neighbor(booking_interface, mail_poller, "update")
+Rel(sharer, booking_engine, "update")
+Rel_Neighbor(booking_engine, mail_poller, "update")
 
 
 @enduml
