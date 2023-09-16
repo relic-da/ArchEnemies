@@ -20,7 +20,7 @@ autonumber 1
 'participant "Web" as web
 
 participant "App" as app
-participant "Booking\ninterface" as booking_interface
+participant "Booking\ninterface" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Third parties\nComplementary services\nconnector" as third_parties_connector
 participant "Third parties API" as third_parties_api
@@ -28,15 +28,15 @@ participant "Notifier" as notifier
 actor "User" as user
 
 app -> app: Obtains geolocation info\nEg: Smartphone GPS, Cell tower id
-app -> booking_interface: Request geolocation based advice
-booking_interface -> booking_storage: Get info
+app -> booking_engine: Request geolocation based advice
+booking_engine -> booking_storage: Get info
 return Index of services
-booking_interface -> third_parties_connector: Get current info on services and events
+booking_engine -> third_parties_connector: Get current info on services and events
 third_parties_connector -> third_parties_api: Get data
 return Data
-third_parties_connector --> booking_interface
-booking_interface --> app: Render local events and services info
-booking_interface -> notifier: Trigger notification
+third_parties_connector --> booking_engine
+booking_engine --> app: Render local events and services info
+booking_engine -> notifier: Trigger notification
 note over notifier
     User will be notified on critical
     events and services in all app clients

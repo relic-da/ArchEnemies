@@ -16,7 +16,7 @@ Person(customer  , Customer , "<$user>   <$mobile_user>" )
 
 System_Boundary(c1, "The Road Warrior") {
 
-Container(booking_core, "Booking core", "", "Booking interface\nBooking tracker\nBooking storage")
+Container(booking_core, "Booking core", "", "Booking Engine\nBooking tracker\nBooking storage")
 
 '    Container(backend_api, "API Application", "Java, Docker Container", "Provides Internet banking functionality via API")
 Container(analytics, "Analytics", "Business inteliggence", "Data reporter\nAnaytics storage\nAnalytics exporter")

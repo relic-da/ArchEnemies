@@ -71,7 +71,7 @@ Feature allow users to predefine one or more emergency contacts to be reached wi
 
 ### Programmatic store of local services index info
 
-The platform programmatically triggers the retrieval and store of index information of quite often used services and/or locations in context with bookings, to support geolocation based features. This information is minimal covering only data regarding the geolocation of services, stations, etc, and its third party API provider. This information is stored in the Booking storage and related, so when a request for current services and events is processed by the Booking Interface it is available in order to locate the relevant Third party connectors required to be used, eg: agencies, GDS, social media, other providers.
+The platform programmatically triggers the retrieval and store of index information of quite often used services and/or locations in context with bookings, to support geolocation based features. This information is minimal covering only data regarding the geolocation of services, stations, etc, and its third party API provider. This information is stored in the Booking storage and related, so when a request for current services and events is processed by the Booking Engine it is available in order to locate the relevant Third party connectors required to be used, eg: agencies, GDS, social media, other providers.
 
 ![](./programmatic_store_local_services_info.svg)
 

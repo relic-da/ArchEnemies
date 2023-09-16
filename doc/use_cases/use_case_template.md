@@ -17,7 +17,7 @@ actor "User" as user
 'participant "Mail\npoller" as mail_poller
 'participant "Mail\nlistener" as mail_listener
 'participant "Mail\nfilterer" as mail_filterer
-'participant "Booking\ninterface" as booking_interface
+'participant "Booking\ninterface" as booking_engine
 'participant "Booking\nstorage" as booking_storage
 'participant "Booking\ntracker" as booking_tracker
 'participant "Notifier" as notifier

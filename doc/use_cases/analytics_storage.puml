@@ -19,16 +19,16 @@ autonumber 1
 
 
 participant "Analytics\nExporter" as analytics_exporter
-participant "Booking\ninterface" as booking_interface
+participant "Booking\ninterface" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Analytics\nStorage" as analytics_storage
 participant "Agency\nconnector" as agency_connector
 participant "Agency/GDS\nAPI" as agency
 
-analytics_exporter -> booking_interface: Read booking data
-booking_interface -> booking_storage: Read data
+analytics_exporter -> booking_engine: Read booking data
+booking_engine -> booking_storage: Read data
 return Data
-booking_interface --> analytics_exporter: Booking records
+booking_engine --> analytics_exporter: Booking records
 analytics_exporter -> agency_connector: Get extra booking analytics related data
 agency_connector -> agency
 return Data analytics
