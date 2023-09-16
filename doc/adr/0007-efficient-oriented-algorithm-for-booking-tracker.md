@@ -12,7 +12,7 @@ Querying booking status for all active bookings of 15mn customers without taking
 
 ## Decision
 
-We will create a 2 separate aproach for the data update.
+We will create 2 separate approaches for the data update.
 
 
 **Near Real-Time Update**: This is responsible for near real-time updates for events with expiring dates within a specified timespan.
@@ -28,4 +28,6 @@ Lower load on system
 Dynamic system to adapt to changing situations
 
 ### Negative
-Ideally user could have been notified bit earlier for a booking dated distant in future
+Will have to maintain two tracking solutions
+
+| [🏠 home](../../README.md#adr) | [<< **ADR** Analytics generator and Analytics exporter ](./0006-analytics-generator-and-analytics-exporter.md) |

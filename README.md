@@ -7,7 +7,7 @@
 * [Actor/Action](#actor/action)
 * [Use cases](#use-cases)
 * [Architecture Analysis](#architecture-analysis)
-* [Architecture Modeling](#architecture-modeling)
+* [Architecture Modeling C4](#architecture-modeling-c4)
 * [ADR](#adr)
 * [Deployment](#deployment)
 * [Cost Analysis](#cost-analysis)
@@ -67,7 +67,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 - [Identify architecture characteristics](./doc/md/arch-char.md)
 - [Identify deserving architecture style(s)](./doc/md/arch-style.md)
-- [Components](./doc/md/components.md)
+- [Component Index](./doc/md/components.md)
 
 ## Architecture Modeling C4
 
