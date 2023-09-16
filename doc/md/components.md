@@ -43,8 +43,6 @@
 - Web
 - App
 
-
-
 | Group |Component |Description |Interacts with |Key Functional Requirements |Future improvements |
 |-------|----------|------------|---------------|----------------------------|--------------------|
 | Utility services (no code, using external solution) |CDN |Content delivery network in front of our stystem is providing global presense for our solution and help achieve better reactiveness in terms of access times for both app and web client on the first stage.  |Users (web and mobile) on one side, API Gateway on another side |Cash static content and provide quick responce for it across the world |Later (if needed) we can have multiregion deployment, but this scenario is out of scope at the moment. | | | | | | | | | | | | | | | | | | | | |
@@ -64,3 +62,6 @@
 |  |Mail listener |interface to receive emails forwarded from user with booking confirmation |user, mail filterer |Lstens for emails from customer in case scanning is not available | | | | | | | | | | | | | | | | | | | | | |
 |  |Mail filterer  |to implement black/whitelisting |user, mail listener, mail poller |Filters emals based on some predefined rules | | | | | | | | | | | | | | | | | | | | | |
 | Notification |Notifier |component that notifies client on change of booking. Could be popup in app or sms/email, in case agency/flight company didn't handle this properly. |user, booking storage |Track updates evens from booking storage do notfy action | | | | | | | | | | | | | | | | | | | | | |
+
+| [🏠 home](../../README.md#architecture-modeling-c4) |
+

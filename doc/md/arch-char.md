@@ -1,3 +1,4 @@
+# Architecture Characteristics
 
 We started qualifying requirements and mapping them with significant architecture characteristics. We grouped them into driving and implicit characteristics. We also referred [Architecture characteristic worksheet](/assets/architecture-characteristics-worksheet.pdf) for this exercise. 
 
@@ -23,3 +24,5 @@ We will use driving characteristics to identify potential suitable architecture 
 | Scan email via API and user forwards email via rule or manually | Security       |            |
 | Store user personal data for long time                          | Security       ||
 | Easy integration with GDS and travel agencies globally          | Extensibility  ||
+
+| [🏠 home](../../README.md#architecture-modeling-c4) |

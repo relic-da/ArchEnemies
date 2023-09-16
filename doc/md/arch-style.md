@@ -1,3 +1,5 @@
+# Architecture style
+
 We identify following architecture styles best suited for the system
 
 - Microservices
@@ -21,3 +23,6 @@ Event driven architecture works on the principle that receiver of the event will
 
 #### Mitigation of lack of testability
 Asynchronous processing is one of the key feature of event driven architecture which gives it edge in many characteristics, in particular performance and elasticity. However, this also makes it more difficult to test. Other reason contributing to the lack of testability could be distributed components or cost of producing huge data volume in lower environments. However, with state-of-the-art technologies; data mocking, integration testing, contract testing and focus on obserability can easily mitigate this risk.
+
+| [🏠 home](../../README.md#architecture-modeling-c4) |
+
