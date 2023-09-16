@@ -2,4 +2,4 @@
 
 ![Context](./c4-context.svg)
 
-| [🏠 home](../../README.md#architecture-modeling-c4) | [**C4** Container >>](./container.md) | 
+| [🏠 home](../../README.md#c4-modeling) | [**C4** Container >>](./container.md) | 
