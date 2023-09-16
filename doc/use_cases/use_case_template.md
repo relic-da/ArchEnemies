@@ -21,7 +21,7 @@ actor "User" as user
 'participant "Booking\nstorage" as booking_storage
 'participant "Booking\ntracker" as booking_tracker
 'participant "Notifier" as notifier
-'participant "Agency\nconnector" agency_connector
+'participant "Agency\nconnector" as agency_connector
 'participant "GDS\nconnector" as gds_connector
 'participant "Sharer" as sharer
 'participant "Social Media\nconnector" as social_connector

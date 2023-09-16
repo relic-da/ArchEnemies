@@ -37,11 +37,11 @@
 
 ## Approach
 
-We follow actor/action model to begin with. We identify the actors and actions they need to perform. We, then, create components which will enable actors to perform specific actions. Next, we find interactions among actors. This provides us high level view of actors components required in the system, their relation to stakeholders and their (inter)dependency. 
+We follow actor/action model to begin with. We identify the actors and actions they need to perform. We, then, create components which will enable actors to perform specific actions. Next, we find interactions among actors. This provides us high level view of actors components required in the system, their relation to stakeholders and their (inter)dependency.
 
 We create use case diagrams to visualize the functional requirements to assists us making design choices and understanding the system on more granular level.
 
-Now we understand the desired system behavior better so we qualify the requirements to identify architecture characteristics. These characteristics help us identify the most suitable architecture style for the solution. 
+Now we understand the desired system behavior better so we qualify the requirements to identify architecture characteristics. These characteristics help us identify the most suitable architecture style for the solution.
 
 We use C4 model technique to design the architecture, starting with most abstract view of the system and going further in details in each step.
 
@@ -62,6 +62,7 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
 - [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
+- [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
 ## Architecture Analysis
 
