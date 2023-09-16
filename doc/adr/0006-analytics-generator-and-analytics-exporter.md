@@ -25,6 +25,6 @@ We will have two components.
 
 ### Negative
 - Losing simplicity to some extent.
-- Maintained overhead in case of limited resources.
+- Maintenance overhead in case of limited resources.
 
 | [🏠 home](../../README.md#adr) | [<< **ADR** One Analytics Generator for yearly user report and other analytics ](./0005-data-reporter-and-analytics-generator.md) | [**ADR** Efficient erythemal for booking tracker >>](./0007-efficient-oriented-algorithm-for-booking-tracker.md) |
