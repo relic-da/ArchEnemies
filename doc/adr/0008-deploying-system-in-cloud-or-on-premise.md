@@ -1,4 +1,4 @@
-# 6. Deploying system in cloud or on premise
+# 8. Deploying system in cloud or on premise
 
 Date: 2023-09-15
 
