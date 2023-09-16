@@ -10,6 +10,7 @@
 * [Approach](#approach)
   * [Actor/Action](#actoraction)
 * [Architecture](#architecture)
+  * [Overview](#overview)
   * [Analysis](#analysis)
   * [ADR](#adr)
   * [C4 Modeling](#c4-modeling)
@@ -71,6 +72,10 @@ We use ADR approach to make a informed decision for all important architecture d
 
 
 ## Architecture
+
+### Overview
+
+![](./doc/arch/road-warrior-highlevel.drawio.png)
 
 ### Analysis
 
