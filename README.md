@@ -94,7 +94,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Deployment
 
-## Cost Analysis
+[Guidance on system deployment](/doc/md/deployment.md)
 
 ## Architectural Fitness
 
