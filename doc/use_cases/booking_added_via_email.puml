@@ -20,7 +20,7 @@ autonumber 1
 participant "Booking agency\nEmail service" as agency
 participant "User Email provider or\nEmail phone client" as user_email
 participant "Mail\npoller/listener\nMobile app" as mail_poller
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Agency/GDS\nconnector" as agency_connector
 participant "Booking\nstorage" as booking_storage
 participant "Booking\ntracker" as booking_tracker

@@ -7,7 +7,7 @@ autonumber 1
 
 actor "User" as user
 participant "App/Web" as app
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Agency\nconnector" as agency_connector
 participant "GDS\nconnector" as gds_connector
 participant "Agency/GDS/Third parties\nStandard API" as third_parties

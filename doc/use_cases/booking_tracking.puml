@@ -6,7 +6,7 @@ skinparam actorstyle awesome
 autonumber 1
 
 participant "Booking\ntracker" as booking_tracker
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Agency/GDS\nconnector" as agency_connector
 participant "Agency/GDS/Third parties\nStandard API" as third_parties
