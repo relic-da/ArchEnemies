@@ -1,4 +1,3 @@
-
 @startuml
 !include <c4/C4_Component.puml>  
 !theme aws-orange

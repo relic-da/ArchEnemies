@@ -1,4 +1,4 @@
-j# Container
+# Container
 
 ![Container](./c4-container.svg)
 

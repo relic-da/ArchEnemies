@@ -1,5 +1,5 @@
 # Component Mail integration
 
-![mail integration](../diagrams/c4/c4-component_mail-integration.png)
+![mail integration](./c4-component_mail-integration.svg)
  
- | [🏠 home](../../README.md#architecture-modeling-c4) | [<< **C4** component booking core ](./component-booking-core.md) | [**C4** component notifier >>](./component-notifier.md) |
+ | [🏠 home](../../README.md#c4-modeling) | [<< **C4** component booking core ](./component-booking-core.md) | [**C4** component notifier >>](./component-notifier.md) |
