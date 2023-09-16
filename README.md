@@ -70,6 +70,8 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Architecture Modeling C4
 
+> The C4 model is an "abstraction-first" approach to diagramming software architecture, based upon abstractions that reflect how software architects and developers think about and build software.
+
 * [Context](doc/c4/context.md)
 * [Container](doc/c4/container.md)
 * Components
