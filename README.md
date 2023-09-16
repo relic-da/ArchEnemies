@@ -81,6 +81,7 @@ We use ADR approach to make a informed decision for all important architecture d
   * [Notifier](doc/c4/component-notifier.md)
   * [Analytics](doc/c4/component-analytics.md)
   * [Front End](doc/c4/component-front-end.md)
+  * [Agency collector](./doc/c4/component-collector-agencies.md)
 
 ## ADR
 
