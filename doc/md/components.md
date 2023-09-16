@@ -1,48 +1,5 @@
 # Components index
 
-## Mail integration
-
-- Mail poller
-- Mail listener
-- Mail filterer
-
-## Booking core
-
-- Booking interface
-- Booking storage
-- Booking tracker
-
-## Notification
-
-- Notifier
-
-## Third party integration
-
-- Agency connector
-- GDS connector
-- Sharer?
-- Social Media connector
-
-
-## Help service
-
-- Help Gateway
-
-
-## Data Analytics
-
-- Data exporter
-- Analytics generator ?
-- Analytics storage
-- Analytics exporter ?
-
-
-
-## Front End
-
-- Web
-- App
-
 | Group |Component |Description |Interacts with |Key Functional Requirements |Future improvements |
 |-------|----------|------------|---------------|----------------------------|--------------------|
 | Utility services (no code, using external solution) |CDN |Content delivery network in front of our stystem is providing global presense for our solution and help achieve better reactiveness in terms of access times for both app and web client on the first stage.  |Users (web and mobile) on one side, API Gateway on another side |Cash static content and provide quick responce for it across the world |Later (if needed) we can have multiregion deployment, but this scenario is out of scope at the moment. | | | | | | | | | | | | | | | | | | | | |
