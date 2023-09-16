@@ -23,7 +23,7 @@ autonumber 1
 
 participant "Analytics\nExporter" as analytics_exporter
 participant "Analytics\nStorage" as analytics_storage
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Third parties\nComplementary services\nconnector" as third_parties_connector
 participant "Third parties API" as third_parties_api
 participant "Booking\nstorage" as booking_storage

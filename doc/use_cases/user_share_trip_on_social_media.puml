@@ -22,7 +22,7 @@ autonumber 1
 
 actor "User" as user
 participant "Web/Mobile App" as app
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Social Media\nconnector" as social_connector
 participant "Social Media\nPublic API" as social_api

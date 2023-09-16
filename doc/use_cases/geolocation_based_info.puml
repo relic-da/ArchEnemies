@@ -20,7 +20,7 @@ autonumber 1
 'participant "Web" as web
 
 participant "App" as app
-participant "Booking\ninterface" as booking_engine
+participant "Booking\nEngine" as booking_engine
 participant "Booking\nstorage" as booking_storage
 participant "Third parties\nComplementary services\nconnector" as third_parties_connector
 participant "Third parties API" as third_parties_api
