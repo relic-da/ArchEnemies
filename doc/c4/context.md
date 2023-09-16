@@ -1,3 +1,5 @@
 # Context
 
-| [🏠 home](../../README.md) | [**C4** Context >>](./c4-container.md) | 
+![Context](../diagrams/c4/c4-context.png)
+
+| [🏠 home](../../README.md#architecture-modeling-c4) | [**C4** Container >>](./c4-container.md) | 
