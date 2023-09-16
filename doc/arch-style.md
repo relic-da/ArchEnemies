@@ -19,10 +19,11 @@ The decision is made based on thorough comparison between both choices and ackno
 Like any other architecture style, Event driven architecture performs good in some characteristics and lacks in some other; for which there are mitigation strategies which we can apply. In particular, two such areas and recommendations are shared 
 
 #### Mitigation of difficulty in error handling
+
 Event driven architecture works on the principle that receiver of the event will handle the error by itself. This implies that is no one-size-fit-all approach for this. However, there are many practices which can be followed per use case. Error logging and monitoring, Dead letter queue (DLQ), Circuit breakers, Retries,Time-out mechanism are few to name.   
 
 #### Mitigation of lack of testability
+
 Asynchronous processing is one of the key feature of event driven architecture which gives it edge in many characteristics, in particular performance and elasticity. However, this also makes it more difficult to test. Other reason contributing to the lack of testability could be distributed components or cost of producing huge data volume in lower environments. However, with state-of-the-art technologies; data mocking, integration testing, contract testing and focus on obserability can easily mitigate this risk.
 
-| [🏠 home](../../README.md#architecture-modeling-c4) |
-
+| [🏠 home](../README.md#analysis) |
