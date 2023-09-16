@@ -38,9 +38,9 @@
 
 ### Challenge
 
-- [Problem statement](./doc/md/problem.md)
-- [Additional Clarifications](./doc/md/clarification.md)
-- [Glossary](./doc/md/glossary.md)
+- [Problem statement](./doc/problem.md)
+- [Additional Clarifications](./doc/clarification.md)
+- [Glossary](./doc/glossary.md)
 
 ## Approach
 
@@ -65,9 +65,9 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Analysis
 
-- [Identify architecture characteristics](./doc/md/arch-char.md)
-- [Identify deserving architecture style(s)](./doc/md/arch-style.md)
-- [Component Index](./doc/md/components.md)
+- [Identify architecture characteristics](./doc/arch-char.md)
+- [Identify deserving architecture style(s)](./doc/arch-style.md)
+- [Component Index](./doc/components.md)
 
 ### ADR
 
