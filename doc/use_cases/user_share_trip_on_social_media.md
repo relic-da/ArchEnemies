@@ -1,7 +1,5 @@
 # User share trip information in social media
 
-[Home](../../README.md#use-cases)
-
 ## Description
 
 End user has already a trip managed in the RoadWarrior app dashboard and would like to share some of its details with some work colleagues or friends in social media.
@@ -15,3 +13,6 @@ End user has already a trip managed in the RoadWarrior app dashboard and would l
 ### Security
 
 _**Social media connector**_ implements security logic to filter out any personal or sensitive information which may be part of booking details.
+
+| [🏠 home](../README.md#use-cases) |
+
