@@ -100,7 +100,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Architectural Fitness
 
-[]
+[Implement Architectural Fitness Functions](/doc/md/arch-fitness.md)
 
 ## References
 
@@ -111,3 +111,4 @@ Though it is not possible to mention every source material we were benefitted fr
 3. [Software Architecture Patterns](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/)
 4. [O'Reilly Software Architecture Kata Entries](https://github.com/tekiegirl/SoftwareArchitectureResources/blob/main/Resources/OReillyKata.md)
 5. [C4 Model](https://c4model.com/)
+6. [Software Architecture: The Hard Parts](https://learning.oreilly.com/library/view/software-architecture-the/9781492086888/)
