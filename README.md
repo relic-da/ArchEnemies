@@ -56,6 +56,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Actor/Action
 
+![](./doc/approach_actor_action_basic.png)
 
 ![](./doc/actor-action.svg)
 
