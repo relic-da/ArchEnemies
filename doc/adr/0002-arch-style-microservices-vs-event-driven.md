@@ -1,4 +1,4 @@
-# 2. Architecture style
+# 2. Microservices vs Event driven architecture style
 
 Date: 2023-09-14
 
@@ -47,3 +47,5 @@ We will implement an **Event-driven** architecture.
 
 - Error Handling is difficult
 - Difficult to test
+
+| [🏠 home](../../README.md#adr) | [<< **ADR** Space based architecture style ](./0001-arch-style-space-based.md) | [**ADR** Dedicated storage for analytics >>](./0003-dedicated-db-for-analytics-usage.md) |

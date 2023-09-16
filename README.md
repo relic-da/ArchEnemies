@@ -7,7 +7,7 @@
 * [Actor/Action](#actor/action)
 * [Use cases](#use-cases)
 * [Architecture Analysis](#architecture-analysis)
-* [Architecture Modeling](#architecture-modeling)
+* [Architecture Modeling C4](#architecture-modeling-c4)
 * [ADR](#adr)
 * [Deployment](#deployment)
 * [Cost Analysis](#cost-analysis)
@@ -37,11 +37,11 @@
 
 ## Approach
 
-We follow actor/action model to begin with. We identify the actors and actions they need to perform. We, then, create components which will enable actors to perform specific actions. Next, we find interactions among actors. This provides us high level view of actors components required in the system, their relation to stakeholders and their (inter)dependency. 
+We follow actor/action model to begin with. We identify the actors and actions they need to perform. We, then, create components which will enable actors to perform specific actions. Next, we find interactions among actors. This provides us high level view of actors components required in the system, their relation to stakeholders and their (inter)dependency.
 
 We create use case diagrams to visualize the functional requirements to assists us making design choices and understanding the system on more granular level.
 
-Now we understand the desired system behavior better so we qualify the requirements to identify architecture characteristics. These characteristics help us identify the most suitable architecture style for the solution. 
+Now we understand the desired system behavior better so we qualify the requirements to identify architecture characteristics. These characteristics help us identify the most suitable architecture style for the solution.
 
 We use C4 model technique to design the architecture, starting with most abstract view of the system and going further in details in each step.
 
@@ -62,12 +62,13 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
 - [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
+- [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
 ## Architecture Analysis
 
 - [Identify architecture characteristics](./doc/md/arch-char.md)
 - [Identify deserving architecture style(s)](./doc/md/arch-style.md)
-- [Components](./doc/md/components.md)
+- [Component Index](./doc/md/components.md)
 
 ## Architecture Modeling C4
 
@@ -91,15 +92,16 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
 - [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
 - [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
-- [Efficient erythemal for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
+- [Efficiency oriented algorithm for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
+- [Deploying system in cloud or on premise](/doc/adr/0008-deploying-system-in-cloud-or-on-premise.md)
 
 ## Deployment
 
-## Cost Analysis
+[Guidance on system deployment](/doc/md/deployment.md)
 
 ## Architectural Fitness
 
-Mention that continuously testing/checking th solution for architectural fitness is critical.
+[Implement Architectural Fitness Functions](/doc/md/arch-fitness.md)
 
 ## References
 
@@ -110,3 +112,4 @@ Though it is not possible to mention every source material we were benefitted fr
 3. [Software Architecture Patterns](https://www.oreilly.com/library/view/software-architecture-patterns/9781491971437/)
 4. [O'Reilly Software Architecture Kata Entries](https://github.com/tekiegirl/SoftwareArchitectureResources/blob/main/Resources/OReillyKata.md)
 5. [C4 Model](https://c4model.com/)
+6. [Software Architecture: The Hard Parts](https://learning.oreilly.com/library/view/software-architecture-the/9781492086888/)

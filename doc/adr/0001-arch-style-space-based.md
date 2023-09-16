@@ -1,4 +1,4 @@
-# 1. Record architecture decisions
+# 1. Space based architecture style
 
 Date: 2023-09-14
 
@@ -29,4 +29,4 @@ We will not use space-based architecture style for the system
 
 - Elasticity
 
-    | [🏠 home](../../README.md#adr) |
+| [🏠 home](../../README.md#adr) | [<< **ADR** ADR Template ](./0000-adr-template.md) | [**ADR** Microservices vs Event driven architecture style >>](./0002-arch-style-microservices-vs-event-driven.md) |
