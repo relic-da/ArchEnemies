@@ -107,6 +107,7 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Booking added via email scan](./doc/use_cases/booking_added_via_email_scan.md)
 - [User shares trip information in social media](./doc/use_cases/user_share_trip_on_social_media.md)
 - [User shares trip information with other user(s) ](./doc/use_cases/user_share_with_other_user.md)
+- [User request help to remediate a booking incident](./doc/use_cases/user_request_help.md)
 - [Agency updates booking status](./doc/use_cases/agency_updates_booking_status.md)
 - [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
