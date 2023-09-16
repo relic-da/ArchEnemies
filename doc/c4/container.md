@@ -2,5 +2,5 @@
 
 ![Container](./c4-container.svg)
 
-| [🏠 home](../../README.md#architecture-modeling-c4) | [**C4** component booking core >>](component-booking-core.md) | 
+| [🏠 home](../../README.md#c4-modeling) | [**C4** component booking core >>](component-booking-core.md) | 
 
