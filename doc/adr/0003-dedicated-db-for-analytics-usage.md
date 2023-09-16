@@ -1,4 +1,4 @@
-# 3. Dedicated db for analytics usage
+# 3. Dedicated storage for analytics
 
 Date: 2023-09-15
 

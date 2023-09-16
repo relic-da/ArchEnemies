@@ -1,4 +1,4 @@
-# 1. Record architecture decisions
+# 1. Space based architecture style
 
 Date: 2023-09-14
 

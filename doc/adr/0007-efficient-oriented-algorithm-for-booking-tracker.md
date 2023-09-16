@@ -1,4 +1,4 @@
-# 6. efficient oriented algorithm for booking tracker
+# 6. Efficiency oriented algorithm for booking tracker
 
 Date: 2023-09-15
 

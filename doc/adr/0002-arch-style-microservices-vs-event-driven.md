@@ -1,4 +1,4 @@
-# 2. Architecture style
+# 2. Microservices vs Event driven architecture style
 
 Date: 2023-09-14
 

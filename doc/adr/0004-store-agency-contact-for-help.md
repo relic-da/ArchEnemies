@@ -1,4 +1,4 @@
-# 4. store Agency contact for Help
+# 4. Storing agency contact details for help
 
 Date: 2023-09-14
 

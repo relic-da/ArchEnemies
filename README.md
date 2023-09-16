@@ -90,7 +90,7 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Storing agency contact details for help](/doc/adr/0004-store-agency-contact-for-help.md)
 - [One Analytics Generator for yearly user report and other analytics](/doc/adr/0005-data-reporter-and-analytics-generator.md)
 - [Analytics generator and Analytics exporter](/doc/adr/0006-analytics-generator-and-analytics-exporter.md)
-- [Efficient erythemal for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
+- [Efficiency oriented algorithm for booking tracker](/doc/adr/0007-efficient-oriented-algorithm-for-booking-tracker.md)
 
 ## Deployment
 
