@@ -31,9 +31,9 @@
 
 ### Challenge
 
-- [Problem statement](/doc/md/problem.md)
-- [Additional Clarifications](/doc/md/clarification.md)
-- [Glossary](/doc/md/glossary.md)
+- [Problem statement](./doc/md/problem.md)
+- [Additional Clarifications](./doc/md/clarification.md)
+- [Glossary](./doc/md/glossary.md)
 
 ## Approach
 
@@ -50,7 +50,7 @@ We use ADR approach to make a informed decision for all important architecture d
 ## Actor/Action
 
 
-![](/doc/actor-action.png)
+![](./doc/actor-action.svg)
 
 
 ## Use cases
@@ -82,6 +82,7 @@ We use ADR approach to make a informed decision for all important architecture d
   * [Notifier](doc/c4/component-notifier.md)
   * [Analytics](doc/c4/component-analytics.md)
   * [Front End](doc/c4/component-front-end.md)
+  * [Agency collector](./doc/c4/component-collector-agencies.md)
 
 ## ADR
 

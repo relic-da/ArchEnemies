@@ -22,7 +22,9 @@ skinparam rectangle{
     BackgroundColor<<sticky>> #F3D22B
     borderColor<<sticky>> black
 
+    RectangleFontSize <<answer>> 100
     borderColor<<answer>> #lightgray
+'    classFontSize <<answer>> 20
     FontColor<<answer>> #3F75BB
     '
  }
@@ -122,10 +124,10 @@ rectangle booking_answer <<answer>> [
 
 ---
 
-This only applies to Road Warrior;
-the user will have to manually
-interact with the individual
-service to make changes or cancelations.
+**This only applies to Road Warrior;**
+**the user will have to manually**
+**interact with the individual**
+**service to make changes or cancelations.**
 
 ]
 
@@ -147,11 +149,11 @@ rectangle help_answer <<answer>>[
 
 ---
 
-We allow the user to specify a preferred travel agent,
-and that's where we redirect them. 
-If the user hasn't specified a travel agent,
-then this facility isn't available 
-(we aren't in the business of brokering for travel agents.
+**We allow the user to specify a preferred travel agent,**
+**and that's where we redirect them.**
+**If the user hasn't specified a travel agent,**
+**then this facility isn't available **
+**(we aren't in the business of brokering for travel agents.**
 
 ]
 
