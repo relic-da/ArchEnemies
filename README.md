@@ -50,7 +50,7 @@ We use ADR approach to make a informed decision for all important architecture d
 ## Actor/Action
 
 
-![](/doc/actor-action.png)
+![](./doc/actor-action.svg)
 
 
 ## Use cases
