@@ -96,11 +96,11 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Architectural Fitness
 
-[Implement Architectural Fitness Functions](/doc/md/arch-fitness.md)
+[Implement Architectural Fitness Functions](./doc/arch-fitness.md)
 
 ## Deployment
 
-[Guidance on system deployment](/doc/md/deployment.md)
+[Guidance on system deployment](./doc/deployment.md)
 
 ## Use cases
 

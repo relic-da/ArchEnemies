@@ -9,7 +9,7 @@ Accepted
 ## Context
 
 
-After qualifying the  [requirements](/doc/md/arch-char.md) into valid architecture characteristics 
+After qualifying the  [requirements](./doc/arch-char.md) into valid architecture characteristics 
 we found the following aspects be the driving characteristics.
 
 - Performance
