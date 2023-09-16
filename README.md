@@ -4,19 +4,19 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Members](#members)
-* [Mission The Road Warrior](#mission-the-road-warrior)
-  * [Challenge](#challenge)
-* [Approach](#approach)
-  * [Actor/Action](#actoraction)
-* [Architecture](#architecture)
-  * [Analysis](#analysis)
-  * [ADR](#adr)
-  * [C4 Modeling](#c4-modeling)
-  * [Architectural Fitness](#architectural-fitness)
-* [Deployment](#deployment)
-* [Use cases](#use-cases)
-* [References](#references)
+- [Members](#members)
+- [Mission The Road Warrior](#mission-the-road-warrior)
+  - [Challenge](#challenge)
+- [Approach](#approach)
+  - [Actor/Action](#actoraction)
+- [Architecture](#architecture)
+  - [Analysis](#analysis)
+  - [ADR](#adr)
+  - [C4 Modeling](#c4-modeling)
+  - [Architectural Fitness](#architectural-fitness)
+- [Deployment](#deployment)
+- [Use cases](#use-cases)
+- [References](#references)
 
 <!-- vim-markdown-toc -->
 
@@ -56,9 +56,9 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Actor/Action
 
-![](./doc/approach_actor_action_basic.png)
+![](./doc/approach/actor_action_base.png)
 
-![](./doc/actor-action.svg)
+![](./doc/approach/actor-action.svg)
 
 
 ## Architecture
