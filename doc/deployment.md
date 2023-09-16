@@ -17,3 +17,4 @@ From our system architecture, we can identify some components which can be imple
 | Booking Tracker     | Lambda                     | Azure Functions                                  | Cloud Functions         |
 | Analytics           | Amazon S3, Amazon Redshift | Cloud Storage, Azure Event Hubs                  | Cloud Storage, BigQuery |
 
+| [🏠 home](../README.md#deployment) |

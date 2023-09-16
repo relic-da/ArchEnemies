@@ -25,3 +25,4 @@ The concrete implementation of fitness functions for these and other criteria ca
 
 There are some characteristics of each architecture which are not measurable as is, for example, agility or operation efficiency. For such cases, we can map some process KPIs with these and measure them. In particular, deployment time and deployment efficiency can be some good indicators of measuring operating efficiency. 
 
+| [🏠 home](../README.md#architectural-fitness) |

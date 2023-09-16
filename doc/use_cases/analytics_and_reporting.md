@@ -1,7 +1,5 @@
 # Analytical metrics are generated and exported to 3rd parties
 
-[Home](../../README.md#use-cases)
-
 ## Description
 
 (Simplest use-case as a start, monthly batch data exports. Extensions: 3rd-parties can read from API, streaming metrics, dashboards, etc.)
@@ -23,3 +21,6 @@ Same process as described for [Yearly user reports](./user_yearly_report.md) on 
 
 - Analytics monetization is a crucial point for the system, since it brings revenue for the company. Data analytics generator and Analytics storage components need to be scalable to handle ever growing amout of users, their bookings, and new types of metrics.
 - Extensibility is in the foundation of the Analytics exporter component so that new ways to deliver metrics and make the 3rd parties engaged can be added.
+
+| [🏠 home](../README.md#use-cases) |
+

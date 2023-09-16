@@ -1,7 +1,5 @@
 # Yearly report is generated and sent to a user
 
-[Home](../../README.md#use-cases)
-
 ## Description
 
 Data analytics generator creates yearly statistical reports (agregated metrics and views on user data) on a scheduled basis (for all users who need the report before next schedule: weekly/daily) and stores them in Analytics storage. Analytics exporter reads the report from Analytics storage and delivers the report to a user via front-end (and email).
@@ -34,3 +32,6 @@ User on demand may request yearly generated reports via the Web/Mobile App.
 
 - Yearly reports help keep users engaged and understand the value that the RoadWarrior brings them. These reports are displayed as graphs and summaries in the front-end (web/app), and notifications can be sent on the availability as well.
 - In this use-case, analytics storage is scalable to handle the growing number of users and Data analytics generator needs to have a certain degree of elasticity, which can be anticipated since the date of registration for a user is known and stored in the system.
+
+| [🏠 home](../README.md#use-cases) |
+
