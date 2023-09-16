@@ -34,4 +34,4 @@ existing airline, hotel, and car rental interface system to update travel detail
 - [ ]  Work internationally
 - [ ]  Support 2 million active users, 15 millions total users
 
-| [🏠 home](../../README.md#architecture-modeling-c4) |
+| [🏠 home](../README.md#architecture-modeling-c4) |
