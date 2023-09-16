@@ -31,9 +31,9 @@
 
 ### Challenge
 
-- [Problem statement](/doc/md/problem.md)
-- [Additional Clarifications](/doc/md/clarification.md)
-- [Glossary](/doc/md/glossary.md)
+- [Problem statement](./doc/md/problem.md)
+- [Additional Clarifications](./doc/md/clarification.md)
+- [Glossary](./doc/md/glossary.md)
 
 ## Approach
 
