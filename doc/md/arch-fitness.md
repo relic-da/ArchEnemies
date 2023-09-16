@@ -2,7 +2,7 @@
 
 Architecture fitness implies two main objectives
 - System adheres to the architecture during implementation and expansion over time
-- System meets the criteria which were driving and are critical for choosing the particular architecture
+- System meets the criteria which were driving and critical for choosing the particular architecture
 
 These objectives are achieved by implementing fitness functions. 
 
@@ -10,7 +10,7 @@ These objectives are achieved by implementing fitness functions.
 
 In this system, we will measure following criteria to ensure that architecture continuously meets the standards it is designed for
 
-**Responsiveness** : System has explicit requirement of responsiveness of its web and app versions (800ms for web and 1.4s for mobile). That has to be measured along the time and release. System performance KPIs, measuered by system monitoring can deliver this.
+**Responsiveness** : System has explicit requirement of responsiveness of its web and app versions (800ms for web and 1.4s for mobile). That has to be measured along the time and release. System performance KPIs, measured by system monitoring can deliver this.
 
 **Fault-tolerance** : System is designed to meet certain criteria in terms of availability and fault-tolerance. It is allowed to have maximum 5 minutes per month downtime.
 
