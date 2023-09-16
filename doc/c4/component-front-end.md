@@ -1,5 +1,5 @@
 # Front End
 
-![Front end](../diagrams/c4/c4-component_front-end.png)
+![Front end](./c4-component_front-end.svg)
  
- | [🏠 home](../../README.md#architecture-modeling-c4) | [<< **C4** component analytics >>](./component-analytics.md) |
+ | [🏠 home](../../README.md#c4-modeling) | [<< **C4** component analytics >>](./component-analytics.md) |

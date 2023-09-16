@@ -1,6 +1,6 @@
-# Analytics
+# Collector Agencies
 
-![analytics](../diagrams/c4/c4-component_collector-agencies.png)
+![analytics](./c4-component_collector-agencies.svg)
  
-| [🏠 home](../../README.md#architecture-modeling-c4) | [<< **C4** Mail integration >>](./component-front-end.md) |
+ | [🏠 home](../../README.md#c4-modeling) | [<< **C4** Mail integration >>](./component-front-end.md) |
 
