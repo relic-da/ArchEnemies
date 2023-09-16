@@ -30,4 +30,4 @@ Dynamic system to adapt to changing situations
 ### Negative
 Will have to maintain two tracking solutions
 
-| [🏠 home](../../README.md#adr) | [<< **ADR** Analytics generator and Analytics exporter ](./0006-analytics-generator-and-analytics-exporter.md) |
+| [🏠 home](../../README.md#adr) | [<< **ADR** Analytics generator and Analytics exporter ](./0006-analytics-generator-and-analytics-exporter.md) | [**ADR** Deploying system in cloud or on premise >>](./0008-deploying-system-in-cloud-or-on-premise.md) |
