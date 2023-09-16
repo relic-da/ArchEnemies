@@ -99,7 +99,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Architectural Fitness
 
-Mention that continuously testing/checking th solution for architectural fitness is critical.
+[]
 
 ## References
 

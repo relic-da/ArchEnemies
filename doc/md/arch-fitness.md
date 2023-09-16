@@ -8,15 +8,20 @@ These objectives are achieved by implementing fitness functions.
 
 >**Architectural Fitness Function** : any mechanism that performs an objective integrity assessment of some architecture characteristic or combination of architecture characteristics.
 
-In this system, we will measure following criteria to ensure that architecture continuously meets the standards it was design to
+In this system, we will measure following criteria to ensure that architecture continuously meets the standards it is design for
 
-**Responsiveness** : System has explicit requirement of responsiveness of its app and web versions. That has to be measured along the time and release. System performance KPIs, delivered by system monitoring can deliver this.
+**Responsiveness** : System has explicit requirement of responsiveness of its web and app versions (800ms for web and 1.4s for mobile). That has to be measured along the time and release. System performance KPIs, delivered by system monitoring can deliver this.
 
-**Fault-tolerance** : System is designed to meet certain criteria in terms of availability and fault-tolerance. 
+**Fault-tolerance** : System is designed to meet certain criteria in terms of availability and fault-tolerance. It is allowed to have maximum 5 minutes per month downtime.
 
-**Security** : System stores significant person data of users and it needs to be assessed continuously that architecture supports expected level of security. 
+**Performance** : User must reflect updates in booking within 5 minutes after it is received by system. 
+
+
+For above, system must build functions and evaluate continuously. In particular, for **Performance** an integration test which inject an update into system and calculates the time it is reflected as notification on frontend. Another test on Front end UI can measure **Responsiveness** . Implementing fitness tests into system in lower environment is essential, however it must be complimented by respective monitoring in production environments. 
+
 
 The concrete implementation of fitness function for these and other criteria can be done in many ways, depending on tools, technologies and team expertise, however it is recommended to embed fitness function into devOps process and implementing these functions as code. 
 
-There would be some characteristics of the architecture which are not measurable as is, for example, agility or operation efficiency . For such cases, we can map some process KPIs with these and measure them. In particular, deployment time and deployment efficiency can be some good indicators of measuring operating efficiency. 
+
+There are some characteristics of the each architecture which are not measurable as is, for example, agility or operation efficiency . For such cases, we can map some process KPIs with these and measure them. In particular, deployment time and deployment efficiency can be some good indicators of measuring operating efficiency. 
 
