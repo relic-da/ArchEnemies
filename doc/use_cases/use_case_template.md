@@ -36,5 +36,5 @@ actor "User" as user
 @enduml
 ```
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
 

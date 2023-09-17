@@ -12,4 +12,4 @@ Agency supporting booking(s) updates its status, eg: cancelling a flight, upgrad
 
 - User can customize preferred notification methods, aside of being notified on Web and/or Mobile App, email and SMS options.
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |

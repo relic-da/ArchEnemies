@@ -33,5 +33,5 @@ User on demand may request yearly generated reports via the Web/Mobile App.
 - Yearly reports help keep users engaged and understand the value that the RoadWarrior brings them. These reports are displayed as graphs and summaries in the front-end (web/app), and notifications can be sent on the availability as well.
 - In this use-case, analytics storage is scalable to handle the growing number of users and Data analytics generator needs to have a certain degree of elasticity, which can be anticipated since the date of registration for a user is known and stored in the system.
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
 

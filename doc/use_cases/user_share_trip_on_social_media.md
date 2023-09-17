@@ -14,5 +14,5 @@ End user has already a trip managed in the RoadWarrior app dashboard and would l
 
 _**Social media connector**_ implements security logic to filter out any personal or sensitive information which may be part of booking details.
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
 

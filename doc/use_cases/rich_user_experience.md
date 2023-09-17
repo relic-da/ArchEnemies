@@ -89,5 +89,5 @@ This interaction covers the sequence when either the Mobile or Web App transpare
 
 ![](./geolocation_based_info.svg)
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
 

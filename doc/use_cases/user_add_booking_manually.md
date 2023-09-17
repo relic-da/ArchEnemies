@@ -14,4 +14,4 @@ End user uses mobile app or public web interface and adds manually a booking PNR
 
 ![booking_tracking](./booking_tracking.svg)
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
