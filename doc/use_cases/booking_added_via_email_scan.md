@@ -8,5 +8,5 @@ End user has integrated Road Warrior application with their email accounts in or
 
 ![](./booking_added_via_email.svg)
 
-| [🏠 home](../README.md#use-cases) |
+| [🏠 home](../../README.md#use-cases) |
 
