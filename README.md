@@ -73,6 +73,8 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Architecture
 
+>This exercise is primarily focused on defining the architectural style and structure of the system. While we acknowledge the critical importance of **security**, **access management**, **high availability**, **encryption**, **GDPR** and **backup** in the overall system design, these aspects are not within the scope of this proposal. Our intention is to first establish the architectural foundation, and subsequently, these implicit aspects will be addressed in a separate, dedicated effort.
+
 ### Overview
 
 ![](./doc/arch/road-warrior-highlevel.drawio.png)
@@ -114,7 +116,8 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Deployment
 
-[Guidance on system deployment](./doc/deployment.md)
+- [Guidance on system deployment](./doc/deployment.md)
+- [Recommendation on product rollout](./doc/rollout.md)
 
 ## Use cases
 
@@ -128,7 +131,7 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 - [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
-## References
+## References and credits
 
 Though it is not possible to mention every source material we were benefitted from, while working on this solution, we would lile to mention following as noteworthy
 
@@ -139,4 +142,3 @@ Though it is not possible to mention every source material we were benefitted fr
 5. [C4 Model](https://c4model.com/)
 6. [Software Architecture: The Hard Parts](https://learning.oreilly.com/library/view/software-architecture-the/9781492086888/)
 7. [Freepik](https://www.freepik.com/)
-8. 

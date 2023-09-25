@@ -1,7 +1,6 @@
 ## Deployment
 
 
-
 We have proposed a tool agnostic architecture which can be implemented with any available tools that fit the architecture guidance on premise or in cloud.
 
 We have designed system architecture based on unique components which take part in certain actions. 

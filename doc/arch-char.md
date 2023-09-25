@@ -7,14 +7,18 @@ We will use driving characteristics to identify potential suitable architecture 
 ### Driving Architecture Characteristics
 
 
-| Requirement                                                                         | Characteristic  | Importance |
-|-------------------------------------------------------------------------------------|-----------------|------------|
-| Update within 5 minutes means we need an every minute batch or streaming approach.  | Performance     | Y          |
-| 5 minutes per month downtime is 4 nines SLI, so system should be reliable.          | Fault Tolerance | Y          |
-| 800ms for web and 1.4s for mobile means system should be performant (CDN, Caching). | Responsiveness  | Y          |
-| 2 millions active user is requirement for DB/workers                                | Elasticity      ||
-| 15 millions users size of DB.                                                       | Scalability     ||
-| 15 millions users size of DB.                                                       | Scalability     ||
+| Requirement                                                                                                                                   | Characteristic  | Importance |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------|------------|
+| Update within 5 minutes means we need an every minute batch or streaming approach.                                                            | Performance     | Y          |
+| 5 minutes per month downtime is 4 nines SLI, so system should be reliable.                                                                    | Fault Tolerance | Y          |
+| 800ms for web and 1.4s for mobile means system should be performant (CDN, Caching).                                                           | Responsiveness  | Y          |
+| 2 millions active user is requirement for DB/workers and 15 millions total users. More users can be active or have booking update at any time | Elasticity      ||
+| 15 millions users size of DB.                                                                                                                 | Scalability     ||
+| We have part of the system which can work with lose coupling among them. In particular, booking tracking and analytics                        | Abstraction     ||
+| We want not so expensive architecture, because it's startup                                                                                   | Cost            ||
+| We need good deployability to have good uptime and develop new features and integrations faster                                               | Deployability   ||
+| We want to be ready to grow                                                                                                                   | Evolvability    ||
+||||
 
 
 ### Implicit Architecture Characteristics
