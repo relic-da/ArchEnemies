@@ -17,6 +17,7 @@
   * [Architectural Fitness](#architectural-fitness)
 * [Deployment](#deployment)
 * [Use cases](#use-cases)
+* [Video Presentation](#video-presentation)
 * [References](#references)
 
 <!-- vim-markdown-toc -->
@@ -131,9 +132,9 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 - [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
-## Demo
+## Video Presentation
 
-[![ArchEnemies Demo](https://github.com/relic-da/ArchEnemies/blob/master/assets/thumbnail-video-play.png)(https://vimeo.com/868112879?share=copy#t=0)]
+[![ArchEnemies Demo](https://github.com/relic-da/ArchEnemies/blob/final/assets/thumbnail-video-play.png)](https://vimeo.com/868112879?share=copy#t=0)
 
 ## References and credits
 
