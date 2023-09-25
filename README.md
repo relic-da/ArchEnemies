@@ -166,7 +166,7 @@ Below is presented in detail the different interactions identified within the co
 <details><summary><b>Interaction matrix</b></summary>
 
 | <span style="display: inline-block; width:60px">Id</span> | From Component         | To Component                      | Interaction type      | Communication Domain                                       | Observations                                              |
-| --:                                                       | --                     | --                                | --                    | --                                                         | --                                                        |
+| ------:                                                   | --                     | --                                | --                    | --                                                         | --                                                        |
 | **INT-1**                                                 | End Users              | CDN                               | HTTP                  | PUBLIC                                                     | Cached on CDN                                             |
 | **INT-2**                                                 | CDN                    | API Gateway                       | HTTP                  | PUBLIC                                                     | Refresh content                                           |
 | **INT-3**                                                 | API Gateway            | Front End                         | HTTP                  | PLATFORM INTERNAL                                          |
