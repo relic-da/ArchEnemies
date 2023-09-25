@@ -139,4 +139,3 @@ Though it is not possible to mention every source material we were benefitted fr
 5. [C4 Model](https://c4model.com/)
 6. [Software Architecture: The Hard Parts](https://learning.oreilly.com/library/view/software-architecture-the/9781492086888/)
 7. [Freepik](https://www.freepik.com/)
-8. 
