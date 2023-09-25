@@ -117,6 +117,7 @@ We use ADR approach to make a informed decision for all important architecture d
 ## Deployment
 
 [Guidance on system deployment](./doc/deployment.md)
+
 [Recommendation on product rollout](./doc/rollout.md)
 
 ## Use cases
