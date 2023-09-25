@@ -138,3 +138,5 @@ Though it is not possible to mention every source material we were benefitted fr
 4. [O'Reilly Software Architecture Kata Entries](https://github.com/tekiegirl/SoftwareArchitectureResources/blob/main/Resources/OReillyKata.md)
 5. [C4 Model](https://c4model.com/)
 6. [Software Architecture: The Hard Parts](https://learning.oreilly.com/library/view/software-architecture-the/9781492086888/)
+7. [Freepik](https://www.freepik.com/)
+8. 
