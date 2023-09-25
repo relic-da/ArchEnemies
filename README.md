@@ -37,7 +37,7 @@
 
 ![](/assets/logo_road_warrior.png)
 
->A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
+> A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
 
 
 ### Challenge
@@ -60,7 +60,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Actor/Action
 
-<details><summary><b>First iteration<b></summary>
+<details><summary><b>First iteration</b></summary>
 
 ![](./doc/approach/actor_action_base.png)
 
@@ -70,13 +70,11 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ![](./doc/approach/actor-action.svg)
 
-</details><br>
-
-
+</details>
 
 ## Architecture
 
->This exercise is primarily focused on defining the architectural style and structure of the system. While we acknowledge the critical importance of **security**, **access management**, **high availability**, **encryption**, **GDPR** and **backup** in the overall system design, these aspects are not within the scope of this proposal. Our intention is to first establish the architectural foundation, and subsequently, these implicit aspects will be addressed in a separate, dedicated effort.
+> This exercise is primarily focused on defining the architectural style and structure of the system. While we acknowledge the critical importance of **security**, **access management**, **high availability**, **encryption**, **GDPR** and **backup** in the overall system design, these aspects are not within the scope of this proposal. Our intention is to first establish the architectural foundation, and subsequently, these implicit aspects will be addressed in a separate, dedicated effort.
 
 ### Overview
 
