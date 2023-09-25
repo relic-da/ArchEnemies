@@ -131,6 +131,10 @@ We use ADR approach to make a informed decision for all important architecture d
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 - [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
 
+## Demo
+
+[![ArchEnemies Demo](https://github.com/relic-da/ArchEnemies/blob/master/assets/thumbnail-video-play.png)(https://vimeo.com/868112879?share=copy#t=0)]
+
 ## References and credits
 
 Though it is not possible to mention every source material we were benefitted from, while working on this solution, we would lile to mention following as noteworthy
