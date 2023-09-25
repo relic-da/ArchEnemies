@@ -4,20 +4,23 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [Members](#members)
-* [Mission The Road Warrior](#mission-the-road-warrior)
-  * [Challenge](#challenge)
-* [Approach](#approach)
-  * [Actor/Action](#actoraction)
-* [Architecture](#architecture)
-  * [Overview](#overview)
-  * [Analysis](#analysis)
-  * [ADR](#adr)
-  * [C4 Modeling](#c4-modeling)
-  * [Architectural Fitness](#architectural-fitness)
-* [Deployment](#deployment)
-* [Use cases](#use-cases)
-* [References](#references)
+- [Members](#members)
+- [Mission The Road Warrior](#mission-the-road-warrior)
+  - [Challenge](#challenge)
+- [Approach](#approach)
+  - [Actor/Action](#actoraction)
+- [Architecture](#architecture)
+  - [Overview](#overview)
+  - [Analysis](#analysis)
+  - [ADR](#adr)
+  - [C4 Modeling](#c4-modeling)
+  - [End to End](#end-to-end)
+    - [Service stack interaction overview](#service-stack-interaction-overview)
+    - [Full component interaction](#full-component-interaction)
+  - [Architectural Fitness](#architectural-fitness)
+- [Deployment](#deployment)
+- [Use cases](#use-cases)
+- [References and credits](#references-and-credits)
 
 <!-- vim-markdown-toc -->
 
@@ -34,7 +37,7 @@
 
 ![](/assets/logo_road_warrior.png)
 
->A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
+> A new startup wants to build the next generation global online trip management dashboard to allow travelers to see all of their existing reservations organized by trip either online (web) or through their mobile device. Build a sustainable architecture for same.
 
 
 ### Challenge
@@ -57,7 +60,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ### Actor/Action
 
-<details><summary><b>First iteration<b></summary>
+<details><summary><b>First iteration</b></summary>
 
 ![](./doc/approach/actor_action_base.png)
 
@@ -67,13 +70,11 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ![](./doc/approach/actor-action.svg)
 
-</details><br>
-
-
+</details>
 
 ## Architecture
 
->This exercise is primarily focused on defining the architectural style and structure of the system. While we acknowledge the critical importance of **security**, **access management**, **high availability**, **encryption**, **GDPR** and **backup** in the overall system design, these aspects are not within the scope of this proposal. Our intention is to first establish the architectural foundation, and subsequently, these implicit aspects will be addressed in a separate, dedicated effort.
+> This exercise is primarily focused on defining the architectural style and structure of the system. While we acknowledge the critical importance of **security**, **access management**, **high availability**, **encryption**, **GDPR** and **backup** in the overall system design, these aspects are not within the scope of this proposal. Our intention is to first establish the architectural foundation, and subsequently, these implicit aspects will be addressed in a separate, dedicated effort.
 
 ### Overview
 
@@ -109,6 +110,97 @@ We use ADR approach to make a informed decision for all important architecture d
   * [Analytics](doc/c4/component-analytics.md)
   * [Front End](doc/c4/component-front-end.md)
   * [Agency collector](./doc/c4/component-collector-agencies.md)
+
+
+### End to End
+
+Below is presented in detail the different interactions identified within the component architecture.
+
+![Legend](./doc/arch/hldv2_legend.png)
+
+#### Service stack interaction overview
+
+![Service stack interaction overview](./doc/arch/hldv2_collapsed.png)
+
+<details><summary><b>User Access Stack</b></summary>
+
+![User Access stack](./doc/arch/hldv2_zoomin_useraccess.png)
+
+</details><br>
+
+<details><summary><b>Booking Core</b></summary>
+
+![Booking Core stack](./doc/arch/hldv2_zoomin_bookingcore.png)
+
+</details><br>
+
+<details><summary><b>Data Analytics</b></summary>
+
+![Data Analytics stack](./doc/arch/hldv2_zoomin_dataanalytics.png)
+
+</details><br>
+
+<details><summary><b>Event Stack</b></summary>
+
+![Event stack](./doc/arch/hldv2_zoomin_eventstack.png)
+
+</details><br>
+
+<details><summary><b>Mail Stack</b></summary>
+
+![Mail stack](./doc/arch/hldv2_zoomin_mailintegration.png)
+
+</details><br>
+
+
+<details><summary><b>Third Parties Stack</b></summary>
+
+![Third Parties stack](./doc/arch/hldv2_zoomin_thirdparty.png)
+
+</details><br>
+
+#### Full component interaction
+
+![Full E2E component interaction](./doc/arch/hldv2_full_interaction_by_id.png)
+
+<details><summary><b>Interaction matrix</b></summary>
+
+| <span style="display: inline-block; width:60px">Id</span> | From Component         | To Component                      | Interaction type      | Communication Domain                                       | Observations                                              |
+| ------:                                                   | --                     | --                                | --                    | --                                                         | --                                                        |
+| **INT-1**                                                 | End Users              | CDN                               | HTTP                  | PUBLIC                                                     | Cached on CDN                                             |
+| **INT-2**                                                 | CDN                    | API Gateway                       | HTTP                  | PUBLIC                                                     | Refresh content                                           |
+| **INT-3**                                                 | API Gateway            | Front End                         | HTTP                  | PLATFORM INTERNAL                                          |
+| **INT-4**                                                 | Booking Engine         | Social Media Connector	REST      | PLATFORM INTERNAL     |
+| **INT-5**                                                 | API Gateway            | Booking Engine                    | HTTP / Streaming      | PLATFORM INTERNAL                                          |
+| **INT-6**                                                 | API Gateway            | Notifier                          | HTTP / REST           | PLATFORM INTERNAL                                          |
+| **INT-7**                                                 | Event Broker           | Notifier	Streaming         | PLATFORM INTERNAL     |
+| **INT-8**                                                 | Mail Poller            | Email Services                    | HTTP / IMAP / POP3    | PUBLIC                                                     | Active polling                                            |
+| **INT-9**                                                 | Email Services         | Mail Listener	SMTP              | PUBLIC                | Passive reception                                          |
+| **INT-10**                                                | Mail Listener          | Mail Filterer	Streaming         | STACK INTERNAL        | Postprocess and filter emails which shall trigger an event |
+| **INT-11**                                                | Mail Poller            | Mail Filterer	Streaming         | STACK INTERNAL        | Postprocess and filter emails which shall trigger an event |
+| **INT-12**                                                | Mail Filterer          | Event Broker	Streaming         | PLATFORM INTERNAL     | Generate events based on mail filtering logic              |
+| **INT-13**                                                | Event Broker           | Booking Engine	Event push        | PLATFORM INTERNAL     |
+| **INT-14**                                                | Booking Engine         | Event Broker	Event pull        | PLATFORM INTERNAL     |
+| **INT-15**                                                | Booking Engine         | Booking storage                   | HTTP / REST / GraphQL | STACK INTERNAL                                             | CRUD operations                                           |
+| **INT-16**                                                | Booking Engine         | Partners Connector	REST      | PLATFORM INTERNAL     | Request context data for a booking                         |
+| **INT-17**                                                | Booking Engine         | Booking Trackers	REST      | STACK INTERNAL        | Create tracker tasks                                       |
+| **INT-18**                                                | Data Exporter          | Booking Engine	REST / GraphQL    | PLATFORM INTERNAL     | Read / Import data for analytics                           |
+| **INT-19**                                                | Data Exporter          | Analytics Storage	Streaming | STACK INTERNAL        | Store data for analytics                                   |
+| **INT-20**                                                | Event Broker           | Data Exporter	Streaming         | PLATFORM INTERNAL     | Booking events relevant for analytics                      |
+| **INT-21**                                                | Analytics Generator    | Analytics Storage	Streaming | STACK INTERNAL        | Import and generation of reports                           |
+| **INT-22**                                                | Analytics Exporter     | Analytics Storage	Streaming | STACK INTERNAL        | Read analytics and reports                                 |
+| **INT-23**                                                | Analytics Exporter     | Analytics Users	Streaming         | PUBLIC                | Expose analytics and reports                               |
+| **INT-24**                                                | Analytics Users        | Analytics Exporter                | HTTP / REST / GraphQL | PUBLIC                                                     | Consume analytics and reports                             |
+| **INT-25**                                                | Agencies Connectors    | Travel Agencies                   | HTTP / REST           | PUBLIC                                                     | Retrieve booking status                                   |
+| **INT-26**                                                | GDS Connectors	GDS    | HTTP / REST                       | PUBLIC                | Retrieve booking status                                    |
+| **INT-27**                                                | Booking Trackers       | Agencies Connectors	REST      | PLATFORM INTERNAL     | Request booking status update                              |
+| **INT-28**                                                | Booking Trackers       | GDS Connectors	REST              | PLATFORM INTERNAL     | Request booking status update                              |
+| **INT-29**                                                | Booking Trackers       | Event Broker	Streaming         | PLATFORM INTERNAL     | Booking event                                              |
+| **INT-30**                                                | Social Media Connector | Social Media                      | HTTP / REST           | PUBLIC                                                     | Share booking info                                        |
+| **INT-31**                                                | Partners Connector     | Partners                          | HTTP / REST           | PUBLIC                                                     | Get complementary info to support location based features |
+
+</details><br>
+
 
 ### Architectural Fitness
 
