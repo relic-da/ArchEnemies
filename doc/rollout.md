@@ -1,6 +1,6 @@
 ## Rollout
 
-We recommender to use MVP approach to have a balance between business value and smooth roll out of the product. This is also more agile so we will be portioned better to adapt to changes. Along with that, it also benefits the system by  mitigating risks, sustainability and strategy alignment. 
+We recommend to use MVP approach to have a balance between business value and smooth roll out of the product. This is also more agile so we will be portioned better to adapt to changes. Along with that, it also benefits the system by  mitigating risks, sustainability and strategy alignment. 
 
 | Functionality Area | Phase 1: MVP                                                          | Phase 2: Maturity                                                    | Phase 3: Beyond                                                                                        |
 |--------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
