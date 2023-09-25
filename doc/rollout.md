@@ -2,6 +2,9 @@
 
 We recommend to use MVP approach to have a balance between business value and smooth roll out of the product. This is also more agile so we will be portioned better to adapt to changes. Along with that, it also benefits the system by  mitigating risks, sustainability and strategy alignment. 
 
+Following is an example of one of the possibilities to release features into phases. This must be adapted to align with strategic roadmap of the product. 
+
+
 | Functionality Area | Phase 1: MVP                                                          | Phase 2: Maturity                                                    | Phase 3: Beyond                                                                                        |
 |--------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Booking Entry      | Manual entry                                                          | Email listener, poller                                               | Users can add other users to their trips                                                               |
@@ -12,5 +15,5 @@ We recommend to use MVP approach to have a balance between business value and sm
 | Integration        || GDS, Travel Agencies                                                  | Local Transport Systems, Cab services                                |
 | Help               || Travel agency                                                         | Local Emergency System                                               |
 
-|
+
 | [🏠 home](../README.md#deployment) |
