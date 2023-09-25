@@ -124,11 +124,26 @@ Below is presented in detail the different interactions identified within the co
 
 <details><summary><b>User Access Stack</b></summary>
 
+Our users access the RoadWarrior via the _CDN_ where we can cache static resources for fast worldwide delivery based on proximity. This then feeds into the _API Gateway_ which is the main artery for all user interactions. _Frontend_ components offer the user access via Web site and support Mobile Apps in popular platforms such _Android_ and _iPhone_.
+
 ![User Access stack](./doc/arch/hldv2_zoomin_useraccess.png)
 
 </details><br>
 
 <details><summary><b>Booking Core</b></summary>
+
+Next is the booking core, which consists of three components: the _Booking Storage_, the _Booking Engine_ – the orchestrator for the lifecycle of tracked user bookings and CRUD operations on the storage-, the _Booking Tracker_ –an ephemeral component that tracks the status of all bookings via integrations with third parties.
+
+_Booking Tracker_ requires a high degree of elasticity to support a rapid increase in bookings for the 15-mil user-base. We envision this to be implemented by single-use lambda functions corresponding to each booking tracked, that need to be launched on a certain schedule.
+
+Composed of three components
+
+- **Booking engine**: acting as orchestrator in context with the lifecycle of the bookings tracked for the end users
+- **Booking Trackers**. Ephemeral component which is responsible to track booking status and report if any relevant change
+- **Booking storage**. Main storage of the stack
+- _Booking engine_ interacts also directly with some third parties in limited scenarios to gather local meaningful data regarding the bookings tracked
+- Northbound wise _Booking Engine_ offers to perform CRUD operations on the booking storage, consumed mainly by _Frontend_ stack and _Data Exporter_ from the _Data Analytics_ stack
+
 
 ![Booking Core stack](./doc/arch/hldv2_zoomin_bookingcore.png)
 
@@ -136,11 +151,18 @@ Below is presented in detail the different interactions identified within the co
 
 <details><summary><b>Data Analytics</b></summary>
 
+The next block is _Data Analytics_, which is one of the most crucial for monetization and survivability of the RoadWarrior. The purpose of this block is to gather booking events and populate the analytics storage, where they are then processed into metrics, that can be shared with third-parties.
+
+
 ![Data Analytics stack](./doc/arch/hldv2_zoomin_dataanalytics.png)
 
 </details><br>
 
 <details><summary><b>Event Stack</b></summary>
+
+_Event stack_ is at the heart of our event-driven architecture. It has an event broker, which integrates in a bus fashion different consumers and providers of events.
+Its design allows to incorporate more providers (eg: more booking companies) as well as comsumers (eg: new platform components) without requiring uplifting any development into the existing components so far integrated.
+
 
 ![Event stack](./doc/arch/hldv2_zoomin_eventstack.png)
 
@@ -148,12 +170,21 @@ Below is presented in detail the different interactions identified within the co
 
 <details><summary><b>Mail Stack</b></summary>
 
+Supports integration with email providers in a proactive and passive manner.
+
+- _Mail poller_ proactively query relevant providers for the end users
+- _Mail listener_ receives emails from the end user inbox in case the user has setup its mailbox to forward or copy emails to be scanned.
+- _Mail filterer_ receives events from both components and enforces which emails shall trigger a booking-relevant event, based on the user configuration.
+
 ![Mail stack](./doc/arch/hldv2_zoomin_mailintegration.png)
 
 </details><br>
 
 
 <details><summary><b>Third Parties Stack</b></summary>
+
+This is the third party integration stack which provides a common interface API. This allows different components from the platform to request data from the third parties on demand
+It is composed of connectors, which can be added and scaled. Every connector maybe responsible to interface with a specific third party southbound wise, while offering a common API northbound which can be consumed by any component internally in the platform.
 
 ![Third Parties stack](./doc/arch/hldv2_zoomin_thirdparty.png)
 
