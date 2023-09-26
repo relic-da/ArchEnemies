@@ -20,7 +20,7 @@
   - [Architectural Fitness](#architectural-fitness)
 - [Deployment](#deployment)
 - [Use cases](#use-cases)
--[Video Presentation](#video-presentation)
+- [Video Presentation](#video-presentation)
 - [References and credits](#references-and-credits)
 
 <!-- vim-markdown-toc -->
