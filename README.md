@@ -134,7 +134,7 @@ We use ADR approach to make a informed decision for all important architecture d
 
 ## Video Presentation
 
-[![ArchEnemies Demo](https://github.com/relic-da/ArchEnemies/blob/final/assets/thumbnail-video-play.png)](https://vimeo.com/868112879?share=copy#t=0)
+Video Download link : [DOWNLOAD](https://drive.google.com/file/d/1EEcIP19wNnMjjDW3nmupGdrIDbVcMORY/view?usp=drive_link)
 
 ## References and credits
 
