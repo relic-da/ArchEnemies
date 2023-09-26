@@ -20,6 +20,7 @@
   - [Architectural Fitness](#architectural-fitness)
 - [Deployment](#deployment)
 - [Use cases](#use-cases)
+-[Video Presentation](#video-presentation)
 - [References and credits](#references-and-credits)
 
 <!-- vim-markdown-toc -->
@@ -253,6 +254,10 @@ It is composed of connectors, which can be added and scaled. Every connector may
 - [User personal yearly reports](./doc/use_cases/user_yearly_report.md)
 - [Data analytics and information access](/doc/use_cases/analytics_and_reporting.md)
 - [Rich user experience based on time and/or geolocation info](./doc/use_cases/rich_user_experience.md)
+
+## Video Presentation
+
+Video Download link : [DOWNLOAD](https://drive.google.com/file/d/1EEcIP19wNnMjjDW3nmupGdrIDbVcMORY/view?usp=drive_link)
 
 ## References and credits
 
